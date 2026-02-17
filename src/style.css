@@ -31,6 +31,16 @@ body {
   overflow: hidden;
 }
 
+/* Hide slides until Reveal.js is ready - prevents FOUC */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.reveal.ready {
+  opacity: 1;
+}
+
 .reveal .slides {
   text-align: left;
   /* Default left alignment */

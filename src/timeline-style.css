@@ -1,0 +1,194 @@
+/* Timeline Slides - Full Screen Presentation Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #1a1a1a;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.timeline-slides {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Individual Module Slide */
+.module-slide {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    cursor: pointer;
+}
+
+.module-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.module-slide.disabled {
+    cursor: not-allowed;
+}
+
+.module-slide:not(.disabled):hover .module-heading {
+    color: #3DDC84;
+    transform: translateX(20px);
+}
+
+/* Vertical Green Line */
+.vertical-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: #3DDC84;
+    box-shadow: 0 0 20px rgba(61, 220, 132, 0.5);
+}
+
+.module-slide.disabled .vertical-line {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+}
+
+/* Large Number on Left */
+.module-number {
+    position: absolute;
+    left: 50px;
+    font-size: 15rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+    user-select: none;
+}
+
+.module-slide.active .module-number {
+    color: rgba(61, 220, 132, 0.15);
+}
+
+/* Module Content */
+.module-content {
+    max-width: 1200px;
+    padding-right: 100px;
+}
+
+.module-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    transition: all 0.4s ease;
+}
+
+.module-slide.disabled .module-heading {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Navigation Buttons */
+.timeline-nav {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+}
+
+.nav-btn {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: rgba(61, 220, 132, 0.2);
+    border-color: #3DDC84;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .module-heading {
+        font-size: 3rem;
+    }
+
+    .module-number {
+        font-size: 12rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .module-slide {
+        padding-left: 80px;
+    }
+
+    .module-number {
+        left: 30px;
+        font-size: 8rem;
+    }
+
+    .module-heading {
+        font-size: 2rem;
+    }
+
+    .module-content {
+        padding-right: 40px;
+    }
+
+    .timeline-nav {
+        right: 20px;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .module-slide {
+        padding-left: 60px;
+    }
+
+    .module-number {
+        left: 20px;
+        font-size: 5rem;
+    }
+
+    .module-heading {
+        font-size: 1.5rem;
+    }
+
+    .vertical-line {
+        width: 4px;
+    }
+}

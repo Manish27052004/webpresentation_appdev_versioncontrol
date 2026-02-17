@@ -22,7 +22,11 @@ const deck = new Reveal({
   margin: 0.1,
 });
 
-deck.initialize();
+deck.initialize().then(() => {
+  // Add ready class to show slides smoothly
+  document.querySelector('.reveal').classList.add('ready');
+  document.body.classList.add('reveal-ready');
+});
 
 // Custom Interaction Scripts
 window.highlightDecision = function (element) {

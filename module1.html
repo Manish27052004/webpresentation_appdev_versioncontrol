@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebPresentation_AppDev_VersionControl</title>
+  <!-- Prevent FOUC - hide everything until Reveal.js loads -->
+  <style>
+    body {
+      opacity: 0;
+      background: #0f0c29;
+      transition: opacity 0.4s ease;
+    }
+
+    body.reveal-ready {
+      opacity: 1;
+    }
+  </style>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Back to Modules Button -->
+  <a href="index.html" class="back-to-modules">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M19 12H5M12 19l-7-7 7-7" />
+    </svg>
+    Back to Modules
+  </a>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 
+        MODULE 1: INTRODUCTION TO MOBILE APP DEVELOPMENT
+        Slide 1 — Opening Impact
+      -->
+      <section data-state="hero-state" class="slide-opening">
+        <div class="background-gradient"></div>
+        <div class="floating-grid"></div>
+
+        <div class="content-wrapper">
+          <p class="module-title">Module 1</p>
+          <h1 class="main-title">Mobile App<br>Development <span class="highlight-year">2026</span></h1>
+
+          <div class="typewriter-container">
+            <p class="typewriter-text">We are living in a mobile-first world.</p>
+          </div>
+
+          <div class="floating-elements">
+            <div class="icon-3d phone-mockup">📱</div>
+            <div class="icon-3d code-brackets">{ }</div>
+            <div class="icon-3d cloud-icon">☁️</div>
+          </div>
+
+          <div class="lottie-placeholder" data-anim="ui-transitions">
+            <!-- Lottie Animation Placeholder -->
+          </div>
+        </div>
+
+        <aside class="notes">
+          We are living in a mobile-first world.
+          Every business, startup, and service today depends on mobile applications.
+          From payments to healthcare, from education to entertainment — mobile apps power modern life.
+          But how are these apps actually built? Today, we break that down clearly.
+        </aside>
+      </section>
+
+      <!-- 
+        SECTION 1: WHAT IS MOBILE APP DEVELOPMENT?
+        Slide 2 — Definition
+      -->
+      <section class="slide-definition">
+        <h2>What is Mobile App Development?</h2>
+        <p class="definition-text">The process of building software applications that run on smartphones and tablets.
+        </p>
+
+        <div class="split-container">
+          <div class="split-side left fragment fade-right">
+            <div class="intro-logos">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android"
+                class="intro-logo android-logo-glow">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+                class="intro-logo filter-white ios-logo-glow">
+            </div>
+            <h3>Native App<br>Development</h3>
+          </div>
+
+          <div class="divider fragment fade-in">
+            <div class="line"></div>
+            <div class="vs-circle">VS</div>
+            <div class="line"></div>
+          </div>
+
+          <div class="split-side right fragment fade-left">
+            <div class="intro-logos">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Native"
+                class="intro-logo react-logo-spin">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" alt="Flutter"
+                class="intro-logo flutter-logo-glow">
+            </div>
+            <h3>Cross-Platform<br>App Development</h3>
+          </div>
+        </div>
+
+        <div class="code-transform-animation">
+          <!-- Animation: Code -> App UI -->
+        </div>
+
+        <aside class="notes">
+          Mobile app development is the process of building software applications that run on smartphones and tablets.
+          In 2026, mobile app development is divided into two major categories:
+          Native App Development and Cross-Platform App Development.
+          Everything in the industry fits into these two approaches.
+        </aside>
+      </section>
+
+      <!-- 
+        SECTION 2: NATIVE APP DEVELOPMENT
+        Slide 3 — What is Native?
+      -->
+      <section class="slide-native-intro">
+        <h2>Native App Development</h2>
+        <p>Building specifically for one OS using official tools.</p>
+
+        <div class="os-comparison">
+          <div class="os-card android fragment scale-up">
+            <div class="glow-effect green"></div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android"
+              class="os-logo">
+            <h3>Android</h3>
+          </div>
+
+          <div class="os-card ios fragment scale-up">
+            <div class="glow-effect blue"></div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+              class="os-logo filter-white">
+            <h3>iOS</h3>
+          </div>
+        </div>
+
+        <p class="fragment fade-up dominator-text">Together, they control almost the entire global market.</p>
+
+        <aside class="notes">
+          Native means building an app specifically for one operating system using its official tools and programming
+          languages.
+          There are two dominant mobile operating systems: Android and iOS.
+        </aside>
+      </section>
+
+      <!-- Slide 4 — Android Development -->
+      <section class="slide-android-dev">
+        <div class="header-row center-header">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android"
+            class="header-logo android-logo-glow">
+          <h2>Android Development Stack</h2>
+        </div>
+
+        <div class="android-tech-grid three-col">
+
+          <!-- Column 1: IDE -->
+          <div class="tech-column fragment fade-up">
+            <h3 class="col-title">IDE</h3>
+            <div class="tech-card-large">
+              <div class="card-icon-large">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"
+                  alt="Android Studio" class="tech-logo-large">
+              </div>
+              <h4>Android Studio</h4>
+              <p class="status-badge official">Official Software</p>
+            </div>
+          </div>
+
+          <!-- Column 2: Language -->
+          <div class="tech-column fragment fade-up" data-fragment-index="1">
+            <h3 class="col-title">Language</h3>
+
+            <!-- Kotlin -->
+            <div class="tech-card-medium active-tech">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
+                class="tech-logo-small">
+              <div class="tech-info">
+                <h4>Kotlin</h4>
+                <span class="badge-modern">Recommended</span>
+              </div>
+            </div>
+
+            <!-- Java -->
+            <div class="tech-card-medium legacy-tech">
+              <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java"
+                class="tech-logo-small">
+              <div class="tech-info">
+                <h4>Java</h4>
+                <span class="badge-legacy">Legacy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: UI -->
+          <div class="tech-column fragment fade-up" data-fragment-index="2">
+            <h3 class="col-title">UI</h3>
+
+            <!-- Compose -->
+            <div class="tech-card-medium active-tech">
+              <svg class="tech-logo-small" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M41.226 76.778a4.002 4.002 0 0 1-.47-1.29c.09.452.25.887.47 1.29zm.578.713c.222.22.472.411.749.548l18.88 10.565-18.88-10.565a2.899 2.899 0 0 1-.747-.548z"
+                  fill="#083042" />
+                <path
+                  d="M64.342 101.967h-.14a8.301 8.301 0 0 1-4.014-1.016l-28.182-15.75c-1.663-.932-2.686-2.66-2.686-4.527V48.628c0-1.373.249-2.69.83-3.842L8.114 32.522c-.913 1.92-1.383 4.088-1.356 6.366v52.927a8.675 8.675 0 0 0 4.458 7.49l46.481 26.012c2.05 1.152 4.347 1.701 6.617 1.701v-.027c.055-3.32.028-16.628.028-25.023z"
+                  fill="#083042" />
+                <path
+                  d="m86.46 50.6-.167-.246c-.138-.192-.275-.357-.413-.548.138.164.275.356.413.547a.973.973 0 0 1 .167.247zM63.262 37.76c.14 0 .251-.027.39-.027-.139.027-.278.027-.39.027z"
+                  fill="#3ddb85" />
+                <path
+                  d="M30.122 44.757a7.214 7.214 0 0 1 2.825-3.072l26.52-15.503a8.065 8.065 0 0 1 8.03-.082l26.798 15.009a8.993 8.993 0 0 1 3.018 2.743L118.99 31.04a14.913 14.913 0 0 0-4.955-4.5L69.766 1.764a13.32 13.32 0 0 0-13.233.137L12.765 27.472a11.704 11.704 0 0 0-4.651 5.049l22.009 12.236z"
+                  fill="#3ddc84" />
+                <path
+                  d="M62.157 37.983c.057-.028.114-.028.17-.056-.056.028-.113.028-.17.056zm-20.88 12.949c.056-.11.111-.22.168-.3-.057.109-.111.19-.168.3l-.082.246z"
+                  fill="#3ddb85" />
+                <path
+                  d="M118.962 31.04 97.285 43.852c.83 1.207 1.329 2.633 1.355 4.089v30.51a7.881 7.881 0 0 1-3.93 6.914L68.188 100.87a8.07 8.07 0 0 1-3.849 1.097c.029 8.369.029 21.677-.027 24.997v.027a13.533 13.533 0 0 0 6.617-1.812l43.769-25.599c4.07-2.387 6.562-6.723 6.506-11.415V37.817c-.028-2.442-.858-4.774-2.242-6.777z"
+                  fill="#4285f4" />
+                <path
+                  d="M86.963 75.187c-.028.056-.028.111-.056.168a.387.387 0 0 0 .056-.168zm-.278-24.227c-.057-.138-.14-.248-.223-.385.083.137.166.275.222.385zM66.807 88.576 84.58 78.178c.111-.054.195-.138.306-.192-.111.054-.195.138-.306.192l-17.773 10.4zM86.74 75.818c-.056.138-.139.275-.196.413.057-.165.112-.303.196-.413z"
+                  fill="#4285f4" />
+                <path
+                  d="M41.198 51.178a5.508 5.508 0 0 0-.415 1.675c-.028.218-.028.438-.028.686v21.483c0 .164 0 .302.028.467.056.465.222.905.47 1.29.167.274.36.492.555.712.222.22.47.411.746.55l18.882 10.563a5.49 5.49 0 0 0 2.684.685h.195a5.155 5.155 0 0 0 2.492-.74L84.58 78.15c.111-.055.194-.138.305-.192.194-.137.388-.275.554-.44.26-.236.501-.492.719-.768.138-.192.277-.383.388-.576.082-.136.139-.274.193-.412.056-.135.14-.301.195-.465.027-.056.027-.111.055-.165a5.403 5.403 0 0 0 .249-1.647V53.044c0-.383-.056-.74-.138-1.096-.055-.248-.14-.468-.222-.688l-.166-.328c-.055-.138-.14-.247-.222-.385l-.166-.246c-.138-.193-.277-.357-.415-.549a5.607 5.607 0 0 0-1.606-1.29L66.337 38.394a6.145 6.145 0 0 0-.97-.44 5.86 5.86 0 0 0-1.385-.246h-.36c-.137 0-.248 0-.386.026a5.658 5.658 0 0 0-.942.165c-.055.027-.11.027-.166.056-.415.11-.803.301-1.191.52l-17.773 10.4a4.548 4.548 0 0 0-1.33 1.18c-.137.192-.276.384-.387.576-.055.11-.11.192-.166.302l-.083.246Z"
+                  fill="#d6f0ff" />
+                <path
+                  d="M64.312 89.288h-.194a5.512 5.512 0 0 1-2.686-.684L42.552 78.04a3.737 3.737 0 0 1-.748-.549 3.31 3.31 0 0 1-.554-.714 3.998 3.998 0 0 1-.47-1.29c-.029-.163-.029-.301-.029-.465V53.537c0-.219 0-.465.029-.686.053-.575.192-1.14.415-1.674L36.1 48.078l-5.98-3.32c-.554 1.152-.83 2.468-.83 3.841v32.047a5.322 5.322 0 0 0 2.685 4.528l28.157 15.776a8.023 8.023 0 0 0 4.014 1.016h.14c0-4.089-.029-6.997-.029-6.997l.055-5.68z"
+                  fill="#083042" />
+                <path
+                  d="M64.312 89.288h-.194a5.512 5.512 0 0 1-2.686-.684L42.552 78.04a3.737 3.737 0 0 1-.748-.549 3.31 3.31 0 0 1-.554-.714 3.998 3.998 0 0 1-.47-1.29c-.029-.163-.029-.301-.029-.465V53.537c0-.219 0-.465.029-.686.053-.575.192-1.14.415-1.674L36.1 48.078l-5.98-3.32c-.554 1.152-.83 2.468-.83 3.841v32.047a5.322 5.322 0 0 0 2.685 4.528l28.157 15.776a8.023 8.023 0 0 0 4.014 1.016h.14c0-4.089-.029-6.997-.029-6.997l.055-5.68z"
+                  fill="#041619" />
+                <path
+                  d="m94.266 41.109-26.799-15.01a8.066 8.066 0 0 0-8.029.083l-26.52 15.504a7.049 7.049 0 0 0-2.826 3.073l6.01 3.32 5.093 3.099.082-.246c.056-.111.111-.22.166-.302.111-.192.25-.384.388-.576.36-.467.803-.85 1.33-1.18l17.772-10.4c.38-.213.777-.387 1.191-.52.056-.027.111-.027.166-.056.308-.084.623-.138.941-.164.138 0 .249-.028.388-.028h.36c.469.03.933.111 1.384.246.34.108.665.255.969.441l17.966 10.07a5.99 5.99 0 0 1 1.608 1.289c.137.164.277.357.414.548l.167.246 4.595-3.044 6.229-3.704c-.803-1.071-1.827-2.032-3.045-2.69z"
+                  fill="#3ddb85" />
+                <path
+                  d="m94.266 41.109-26.799-15.01a8.066 8.066 0 0 0-8.029.083l-26.52 15.504a7.049 7.049 0 0 0-2.826 3.073l6.01 3.32 5.093 3.099.082-.246c.056-.111.111-.22.166-.302.111-.192.25-.384.388-.576.36-.467.803-.85 1.33-1.18l17.772-10.4c.38-.213.777-.387 1.191-.52.056-.027.111-.027.166-.056.308-.084.623-.138.941-.164.138 0 .249-.028.388-.028h.36c.469.03.933.111 1.384.246.34.108.665.255.969.441l17.966 10.07a5.99 5.99 0 0 1 1.608 1.289c.137.164.277.357.414.548l.167.246 4.595-3.044 6.229-3.704c-.803-1.071-1.827-2.032-3.045-2.69z"
+                  fill="#37bf6e" />
+                <path
+                  d="M86.46 50.602c.083.136.139.246.221.384l.167.329a4.783 4.783 0 0 1 .36 1.783V73.54a5.414 5.414 0 0 1-.25 1.646c-.027.054-.027.11-.055.164a3.423 3.423 0 0 1-.193.468c-.057.135-.14.273-.195.41-.11.193-.249.384-.388.577a6.243 6.243 0 0 1-.719.767c-.166.165-.36.302-.554.44-.111.054-.193.137-.304.192L66.776 88.602a5.841 5.841 0 0 1-2.492.742v5.679s0 2.909.028 6.997a7.785 7.785 0 0 0 3.849-1.097l26.52-15.504c2.465-1.453 3.96-4.088 3.932-6.913V47.995c-.027-1.482-.525-2.882-1.355-4.089l-6.231 3.705z"
+                  fill="#4285f4" />
+                <path
+                  d="M86.46 50.602c.083.136.139.246.221.384l.167.329a4.783 4.783 0 0 1 .36 1.783V73.54a5.414 5.414 0 0 1-.25 1.646c-.027.054-.027.11-.055.164a3.423 3.423 0 0 1-.193.468c-.057.135-.14.273-.195.41-.11.193-.249.384-.388.577a6.243 6.243 0 0 1-.719.767c-.166.165-.36.302-.554.44-.111.054-.193.137-.304.192L66.776 88.602a5.841 5.841 0 0 1-2.492.742v5.679s0 2.909.028 6.997a7.785 7.785 0 0 0 3.849-1.097l26.52-15.504c2.465-1.453 3.96-4.088 3.932-6.913V47.995c-.027-1.482-.525-2.882-1.355-4.089l-6.231 3.705z"
+                  fill="#3870b2" />
+                <path d="M62.155 37.982c-.416.11-.804.302-1.19.52l-17.774 10.4 17.772-10.398a4.54 4.54 0 0 1 1.19-.52z"
+                  fill="#d6f0ff" />
+                <path opacity=".1"
+                  d="M62.155 37.982c-.416.11-.804.302-1.19.52l-17.774 10.4 17.772-10.398a4.54 4.54 0 0 1 1.19-.52z"
+                  fill="#000" />
+                <path
+                  d="M85.88 49.806a5.615 5.615 0 0 0-1.605-1.29l-17.968-10.07 17.967 10.07a5.6 5.6 0 0 1 1.606 1.29z"
+                  fill="#d6f0ff" />
+                <path opacity=".1"
+                  d="M85.88 49.806a5.615 5.615 0 0 0-1.605-1.29l-17.968-10.07 17.967 10.07a5.6 5.6 0 0 1 1.606 1.29z"
+                  fill="#000" />
+                <path d="M86.848 51.289a6.7 6.7 0 0 1 .22.684c-.055-.219-.14-.438-.222-.684z" fill="#d6f0ff" />
+                <path opacity=".1" d="M86.848 51.289a6.7 6.7 0 0 1 .22.684c-.055-.219-.14-.438-.222-.684z"
+                  fill="#000" />
+                <path d="M86.956 75.186a5.34 5.34 0 0 0 .249-1.646V53.098 73.54a5.34 5.34 0 0 1-.25 1.646z"
+                  fill="#d6f0ff" />
+                <path opacity=".1" d="M86.956 75.186a5.34 5.34 0 0 0 .249-1.646V53.098 73.54a5.34 5.34 0 0 1-.25 1.646z"
+                  fill="#000" />
+              </svg>
+              <div class="tech-info">
+                <h4>Compose</h4>
+                <span class="badge-modern">Modern</span>
+              </div>
+            </div>
+
+            <!-- XML -->
+            <div class="tech-card-medium legacy-tech">
+              <div class="xml-icon-placeholder">&lt;/&gt;</div>
+              <div class="tech-info">
+                <h4>XML</h4>
+                <span class="badge-legacy">Legacy</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="notes">
+          We have 3 main pillars in Android Development:
+          1. Software (IDE): Android Studio is the only official way to go.
+          2. Language: Kotlin is the modern standard. Java is legacy.
+          3. UI: Jetpack Compose is the new modern declarative UI. XML is the old imperative way.
+          Focus on the Modern stack: Kotlin + Compose.
+        </aside>
+      </section>
+
+      <!-- Slide 5 — iOS Development -->
+      <section class="slide-ios-dev">
+        <div class="header-row center-header">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+            class="header-logo filter-white ios-logo-glow">
+          <h2>iOS Development Stack</h2>
+        </div>
+
+        <div class="android-tech-grid three-col">
+
+          <!-- Column 1: IDE -->
+          <div class="tech-column fragment fade-up">
+            <h3 class="col-title">IDE</h3>
+            <div class="tech-card-large ios-theme">
+              <div class="card-icon-large">
+                <img
+                  src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/xcode.png"
+                  alt="Xcode" class="tech-logo-large">
+              </div>
+              <h4>Xcode</h4>
+              <p class="status-badge official ios-badge">Official Software</p>
+            </div>
+          </div>
+
+          <!-- Column 2: Language -->
+          <div class="tech-column fragment fade-up" data-fragment-index="1">
+            <h3 class="col-title">Language</h3>
+
+            <!-- Swift -->
+            <div class="tech-card-medium active-tech ios-active">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg" alt="Swift"
+                class="tech-logo-small">
+              <div class="tech-info">
+                <h4>Swift</h4>
+                <span class="badge-modern ios-badge">Recommended</span>
+              </div>
+            </div>
+
+            <!-- Obj-C -->
+            <div class="tech-card-medium legacy-tech">
+              <div class="xml-icon-placeholder">[M]</div>
+              <div class="tech-info">
+                <h4>Obj-C</h4>
+                <span class="badge-legacy">Legacy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: UI -->
+          <div class="tech-column fragment fade-up" data-fragment-index="2">
+            <h3 class="col-title">UI</h3>
+
+            <!-- SwiftUI -->
+            <div class="tech-card-medium active-tech ios-active">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg" alt="SwiftUI"
+                class="tech-logo-small">
+              <div class="tech-info">
+                <h4>SwiftUI</h4>
+                <span class="badge-modern ios-badge">Modern</span>
+              </div>
+            </div>
+
+            <!-- UIKit -->
+            <div class="tech-card-medium legacy-tech">
+              <div class="xml-icon-placeholder">UI</div>
+              <div class="tech-info">
+                <h4>UIKit</h4>
+                <span class="badge-legacy">Legacy</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="notes">
+          iOS Development Pillars:
+          1. IDE: Xcode (Mac only).
+          2. Language: Swift is the modern standard. Objective-C is legacy.
+          3. UI: SwiftUI is the modern declarative framework. UIKit corresponds to XML/View system.
+        </aside>
+      </section>
+
+      <!-- 
+        SECTION 3: CROSS-PLATFORM DEVELOPMENT
+        Slide 7 — What is Cross Platform?
+      -->
+      <section class="slide-cross-platform">
+        <h2>Cross-Platform Development</h2>
+
+        <div class="cp-container">
+          <!-- Top: One Codebase -->
+          <div class="codebase-visual fragment fade-down">
+            <div class="code-block-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span>main.dart / App.tsx</span>
+            </div>
+            <div class="code-content">
+              <code>One Codebase</code>
+              <div class="typing-cursor"></div>
+            </div>
+          </div>
+
+          <!-- Middle: Branching Animation -->
+          <div class="branching-paths">
+            <div class="path-line left-path fragment draw-line"></div>
+            <div class="path-line right-path fragment draw-line"></div>
+
+            <div class="platform-targets">
+              <div class="platform-target fragment fade-right">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android"
+                  class="platform-logo android-glow">
+              </div>
+              <div class="platform-target fragment fade-left">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+                  class="platform-logo ios-glow filter-white">
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Frameworks -->
+          <div class="framework-grid">
+            <!-- Flutter -->
+            <div class="framework-card fragment fade-up">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" alt="Flutter"
+                class="fw-logo">
+              <h4>Flutter</h4>
+              <p>Google's UI Toolkit</p>
+            </div>
+
+            <!-- React Native -->
+            <div class="framework-card fragment fade-up">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Native"
+                class="fw-logo react-spin">
+              <h4>React Native</h4>
+              <p>React for Mobile</p>
+            </div>
+
+            <!-- KMP -->
+            <div class="framework-card fragment fade-up">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin Multiplatform"
+                class="fw-logo">
+              <h4>KMP</h4>
+              <p>Shared Logic</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="notes">
+          Cross-platform means writing one codebase that deploys to both Android and iOS.
+          Key players: Flutter (Google), React Native (Meta), and Kotlin Multiplatform (JetBrains).
+        </aside>
+      </section>
+
+      <!-- Slide 8 — Flutter -->
+      <section class="slide-flutter">
+        <div class="header-row center-header">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" alt="Flutter"
+            class="header-logo flutter-logo-glow">
+          <h2>Flutter</h2>
+        </div>
+
+        <div class="flutter-refine-grid">
+          <!-- Row 1: Compact Language & IDE -->
+          <div class="compact-row">
+            <div class="detail-card glass-card compact fragment fade-down">
+              <div class="card-label">Language</div>
+              <div class="horizontal-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png" alt="Dart"
+                  class="card-logo small">
+                <h4>Dart</h4>
+              </div>
+            </div>
+
+            <div class="detail-card glass-card compact fragment fade-down">
+              <div class="card-label">IDEs</div>
+              <div class="horizontal-content">
+                <div class="ide-logos">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
+                    alt="VS Code" class="card-logo x-small">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"
+                    alt="Android Studio" class="card-logo x-small">
+                </div>
+                <h4>VS Code / Android Studio</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: UI Language -->
+          <div class="ui-section glass-card fragment fade-up">
+            <h3>UI Development</h3>
+            <div class="ui-lang-content">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png" alt="Dart"
+                class="ui-lang-logo">
+              <div class="ui-lang-text">
+                <h4>Dart</h4>
+                <p>Declarative UI. One language for Logic & Layout.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Enormous Platforms Section -->
+        <div class="platforms-section-large fragment fade-up">
+          <h3>Build for Any Screen</h3>
+          <div class="platform-row-large">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android"
+              class="platform-icon-large" title="Android">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+              class="platform-icon-large filter-white" title="iOS">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg"
+              alt="Web" class="platform-icon-large" title="Web">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg" alt="Windows"
+              class="platform-icon-large filter-white" title="Windows">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png" alt="macOS"
+              class="platform-icon-large" title="macOS">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux"
+              class="platform-icon-large filter-white" title="Linux">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/HarmonyOS_Sans_logo.svg/1920px-HarmonyOS_Sans_logo.svg.png"
+              alt="HarmonyOS" class="platform-icon-large filter-white" title="HarmonyOS">
+          </div>
+        </div>
+
+        <aside class="notes">
+          Flutter uses Dart. Supported IDEs: VS Code & Android Studio. UI is built with Widgets.
+          Targets: Android, iOS, Web, Windows, macOS, Linux, and HarmonyOS (using OpenHarmony).
+        </aside>
+      </section>
+
+      <!-- Slide 9 — React Native -->
+      <section class="slide-react-native">
+        <div class="header-row center-header">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Native"
+            class="header-logo react-spin">
+          <h2>React Native</h2>
+        </div>
+
+        <div class="flutter-refine-grid">
+          <!-- Row 1: Compact Language & IDE -->
+          <div class="compact-row">
+            <div class="detail-card glass-card compact fragment fade-down">
+              <div class="card-label">Language</div>
+              <div class="horizontal-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JS"
+                  class="card-logo small">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TS"
+                  class="card-logo small">
+                <h4>JS / TS</h4>
+              </div>
+            </div>
+
+            <div class="detail-card glass-card compact fragment fade-down">
+              <div class="card-label">IDE</div>
+              <div class="horizontal-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
+                  alt="VS Code" class="card-logo small">
+                <h4>VS Code</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: UI Development -->
+          <div class="ui-section glass-card fragment fade-up">
+            <h3>UI Development</h3>
+            <div class="ui-lang-content">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React"
+                class="ui-lang-logo react-spin">
+              <div class="ui-lang-text">
+                <h4>React (JSX)</h4>
+                <p>Learn once, write anywhere. Native Components.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Platforms -->
+        <div class="platforms-section-large fragment fade-up">
+          <h3>Build for Mobile</h3>
+          <div class="platform-row-large">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android"
+              class="platform-icon-large" title="Android">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+              class="platform-icon-large filter-white" title="iOS">
+          </div>
+        </div>
+
+        <aside class="notes">
+          React Native uses JavaScript/TypeScript. JS bridge communicates with native modules.
+          Uses React (JSX) to render Native Components.
+        </aside>
+      </section>
+
+      <!-- Slide 10 — Kotlin Multiplatform -->
+      <section class="slide-kmp">
+        <div class="header-row center-header">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
+            class="header-logo">
+          <h2>Kotlin Multiplatform</h2>
+        </div>
+
+        <div class="tech-grid-large">
+          <!-- Row 1: Language & IDE -->
+          <div class="lang-section glass-card fragment fade-up">
+            <h3>LANGUAGE</h3>
+            <div class="lang-content-large">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
+                class="lang-logo-large">
+              <span class="lang-name-large">Kotlin</span>
+            </div>
+          </div>
+
+          <div class="ide-section glass-card fragment fade-up">
+            <h3>IDE</h3>
+            <div class="ide-content-large">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"
+                alt="Android Studio" class="ide-logo-large">
+              <span class="ide-name-large">Android Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shared Business Logic Section -->
+        <div class="kmp-architecture-wrapper fragment fade-up">
+          <!-- Center Badge at Top -->
+          <div class="kmp-top-section">
+            <div class="shared-logic-badge-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
+                class="badge-icon-small">
+              <div>
+                <strong>Shared Business Logic</strong>
+                <p>Networking, Data, Models</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connecting Lines SVG -->
+          <svg class="kmp-connector-lines" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <line x1="500" y1="0" x2="100" y2="100" stroke="rgba(124, 77, 255, 0.4)" stroke-width="2" />
+            <line x1="500" y1="0" x2="300" y2="100" stroke="rgba(124, 77, 255, 0.4)" stroke-width="2" />
+            <line x1="500" y1="0" x2="500" y2="100" stroke="rgba(124, 77, 255, 0.4)" stroke-width="2" />
+            <line x1="500" y1="0" x2="700" y2="100" stroke="rgba(124, 77, 255, 0.4)" stroke-width="2" />
+            <line x1="500" y1="0" x2="900" y2="100" stroke="rgba(124, 77, 255, 0.4)" stroke-width="2" />
+          </svg>
+
+          <!-- Platform Targets with Side Label -->
+          <div class="kmp-platforms-container">
+            <div class="kmp-side-label">
+              <strong>Shared Logic &<br>Native UI</strong>
+            </div>
+
+            <div class="kmp-platforms-grid">
+              <div class="kmp-platform-card">
+                <div class="platform-icon-circle android-circle">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android">
+                </div>
+                <span class="platform-name">Android</span>
+                <span class="platform-tech">Compose</span>
+              </div>
+
+              <div class="kmp-platform-card">
+                <div class="platform-icon-circle ios-circle">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+                    class="filter-white">
+                </div>
+                <span class="platform-name">iOS</span>
+                <span class="platform-tech">SwiftUI</span>
+              </div>
+
+              <div class="kmp-platform-card">
+                <div class="platform-icon-circle web-circle">
+                  <span class="icon-emoji">🌐</span>
+                </div>
+                <span class="platform-name">Web</span>
+                <span class="platform-tech">Wasm</span>
+              </div>
+
+              <div class="kmp-platform-card">
+                <div class="platform-icon-circle desktop-circle">
+                  <span class="icon-emoji">💻</span>
+                </div>
+                <span class="platform-name">Desktop</span>
+                <span class="platform-tech">Compose</span>
+              </div>
+
+              <div class="kmp-platform-card">
+                <div class="platform-icon-circle server-circle">
+                  <span class="icon-emoji">📦</span>
+                </div>
+                <span class="platform-name">Server</span>
+                <span class="platform-tech">Ktor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-label fragment">
+          <p><strong>Build for Mobile</strong></p>
+        </div>
+
+        <aside class="notes">
+          Kotlin Multiplatform: Share business logic across all platforms.
+          Each platform gets native UI. Networking, data, and models are shared.
+        </aside>
+      </section>
+
+      <!-- Slide 11 — Compose Multiplatform -->
+      <section class="slide-cmp">
+        <div class="header-row center-header">
+          <h2>Compose Multiplatform</h2>
+        </div>
+
+        <div class="tech-grid-large">
+          <!-- Row 1: Language & Framework -->
+          <div class="lang-section glass-card fragment fade-up">
+            <h3>LANGUAGE</h3>
+            <div class="lang-content-large">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
+                class="lang-logo-large">
+              <span class="lang-name-large">Kotlin</span>
+            </div>
+          </div>
+
+          <div class="framework-section glass-card fragment fade-up">
+            <h3>FRAMEWORK</h3>
+            <div class="framework-content-large">
+              <img
+                src="https://3.bp.blogspot.com/-VVp3WvJvl84/X0Vu6EjYqDI/AAAAAAAAPjU/ZOMKiUlgfg8ok8DY8Hc-ocOvGdB0z86AgCLcBGAsYHQ/s1600/jetpack%2Bcompose%2Bicon_RGB.png"
+                alt="Jetpack Compose" class="framework-logo-large">
+              <span class="framework-name-large">Jetpack Compose</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shared UI Codebase Section -->
+        <div class="cmp-architecture fragment fade-up">
+          <div class="cmp-top-section">
+            <div class="shared-ui-badge-cmp">
+              <img
+                src="https://3.bp.blogspot.com/-VVp3WvJvl84/X0Vu6EjYqDI/AAAAAAAAPjU/ZOMKiUlgfg8ok8DY8Hc-ocOvGdB0z86AgCLcBGAsYHQ/s1600/jetpack%2Bcompose%2Bicon_RGB.png"
+                alt="Compose" class="badge-icon-cmp">
+              <div>
+                <strong>Shared UI</strong>
+                <p>Write Once, Run Everywhere</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cmp-flow-wrapper">
+            <div class="cmp-side-label">
+              <strong>Shared UI<br>Codebase</strong>
+            </div>
+            <div class="cmp-flow">
+              <div class="cmp-target">
+                <div class="platform-icon-circle android-circle">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android">
+                </div>
+                <span>Android</span>
+              </div>
+              <div class="cmp-target">
+                <div class="platform-icon-circle ios-circle">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+                    class="filter-white">
+                </div>
+                <span>iOS</span>
+              </div>
+              <div class="cmp-target">
+                <div class="platform-icon-circle desktop-circle">
+                  <span class="icon-emoji">💻</span>
+                </div>
+                <span>Desktop</span>
+              </div>
+              <div class="cmp-target">
+                <div class="platform-icon-circle web-circle">
+                  <span class="icon-emoji">🌐</span>
+                </div>
+                <span>Web</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="notes">
+          Compose Multiplatform: Share both UI and logic across platforms.
+          Truly write once, run everywhere with Jetpack Compose.
+        </aside>
+      </section>
+
+      <!-- 
+        SECTION 4: CAREER OPTIONS IN MOBILE DEVELOPMENT
+
+        Career Opportunities Slides
+      -->
+
+      <!-- Slide 10 — Native Android Career -->
+      <section class="slide-career-android">
+        <div class="career-header-compact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android"
+            class="career-logo-small">
+          <div>
+            <h2>Native Android (Kotlin / Java)</h2>
+            <div class="demand-rating"><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span
+                class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span></div>
+          </div>
+        </div>
+
+        <div class="career-grid-compact">
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">🏢 Top Companies</h3>
+            <div class="company-list-compact">
+              <div class="company-item-compact"><img src="https://logowik.com/content/uploads/images/flipkart1670.jpg"
+                  class="company-logo-tiny"> Flipkart</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/2/24/Paytm_Logo_%28standalone%29.svg"
+                  class="company-logo-tiny"> Paytm</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/14/PhonePe_Logo.svg" class="company-logo-tiny">
+                PhonePe</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/en/1/12/Swiggy_logo.svg" class="company-logo-tiny"> Swiggy
+              </div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png" class="company-logo-tiny">
+                Zomato</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/11/Meesho_logo.png" class="company-logo-tiny">
+                Meesho</div>
+            </div>
+          </div>
+
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">💰 Salary (India)</h3>
+            <div class="salary-table-compact">
+              <div class="salary-row-compact entry">
+                <span class="level-text">Entry (0-2y)</span>
+                <span class="salary-text">₹4-8L</span>
+              </div>
+              <div class="salary-row-compact mid">
+                <span class="level-text">Mid (3-5y)</span>
+                <span class="salary-text">₹10-18L</span>
+              </div>
+              <div class="salary-row-compact senior">
+                <span class="level-text">Senior (6+y)</span>
+                <span class="salary-text">₹20-35L+</span>
+              </div>
+            </div>
+            <p class="note-text fragment">Top companies → ₹40L+</p>
+          </div>
+        </div>
+
+        <div class="market-tag fragment"><span class="badge-high">Very High Demand</span></div>
+      </section>
+
+      <!-- Slide 11 — Native iOS Career -->
+      <section class="slide-career-ios">
+        <div class="career-header-compact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+            class="career-logo-small filter-white">
+          <div>
+            <h2>Native iOS (Swift)</h2>
+            <div class="demand-rating"><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span
+                class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span class="fire-icon dim">🔥</span></div>
+          </div>
+        </div>
+
+        <div class="career-grid-compact">
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">🏢 Top Companies</h3>
+            <div class="company-list-compact">
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                  class="company-logo-tiny filter-white"> Apple India</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/8/8c/CRED_Logo.png" class="company-logo-tiny">
+                CRED</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Ola_Cabs_logo.svg" class="company-logo-tiny">
+                Ola</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/4/43/Byju%27s_logo.svg" class="company-logo-tiny">
+                Byju's</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg" class="company-logo-tiny">
+                Razorpay</div>
+            </div>
+          </div>
+
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">💰 Salary (India)</h3>
+            <div class="salary-table-compact">
+              <div class="salary-row-compact entry">
+                <span class="level-text">Entry</span>
+                <span class="salary-text">₹5-9L</span>
+              </div>
+              <div class="salary-row-compact mid">
+                <span class="level-text">Mid</span>
+                <span class="salary-text">₹12-20L</span>
+              </div>
+              <div class="salary-row-compact senior">
+                <span class="level-text">Senior</span>
+                <span class="salary-text">₹22-40L</span>
+              </div>
+            </div>
+            <p class="note-text fragment">Premium startups pay more</p>
+          </div>
+        </div>
+
+        <div class="market-tag fragment"><span class="badge-medium">Medium Demand</span> <span
+            class="badge-neutral">India is Android-dominant</span></div>
+      </section>
+
+      <!-- Slide 12 — Flutter Career -->
+      <section class="slide-career-flutter">
+        <div class="career-header-compact">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" alt="Flutter"
+            class="career-logo-small">
+          <div>
+            <h2>Flutter</h2>
+            <div class="demand-rating"><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span
+                class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span class="fire-icon dim">🔥</span></div>
+          </div>
+        </div>
+
+        <div class="career-grid-compact">
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">🏢 Top Companies</h3>
+            <div class="company-list-compact">
+              <div class="company-item-compact"><img src="https://www.1mg.com/images/tata_1mg_logo.svg"
+                  class="company-logo-tiny"> Tata 1mg</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/d/df/Nykaa_logo.png" class="company-logo-tiny">
+                Nykaa</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Upgrad_logo.svg" class="company-logo-tiny">
+                upGrad</div>
+              <div class="company-item-compact">🚀 Early startups</div>
+              <div class="company-item-compact">🏢 Service companies</div>
+            </div>
+          </div>
+
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">💰 Salary (India)</h3>
+            <div class="salary-table-compact">
+              <div class="salary-row-compact entry">
+                <span class="level-text">Entry</span>
+                <span class="salary-text">₹3.5-7L</span>
+              </div>
+              <div class="salary-row-compact mid">
+                <span class="level-text">Mid</span>
+                <span class="salary-text">₹8-15L</span>
+              </div>
+              <div class="salary-row-compact senior">
+                <span class="level-text">Senior</span>
+                <span class="salary-text">₹16-28L</span>
+              </div>
+            </div>
+            <p class="note-text fragment">Cost-efficient for MVPs</p>
+          </div>
+        </div>
+
+        <div class="market-tag fragment"><span class="badge-high">Very High Demand</span> <span
+            class="badge-neutral">Startup favorite</span></div>
+      </section>
+
+      <!-- Slide 13 — React Native Career -->
+      <section class="slide-career-rn">
+        <div class="career-header-compact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Native"
+            class="career-logo-small react-spin">
+          <div>
+            <h2>React Native</h2>
+            <div class="demand-rating"><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span
+                class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span class="fire-icon dim">🔥</span></div>
+          </div>
+        </div>
+
+        <div class="career-grid-compact">
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">🏢 Top Companies</h3>
+            <div class="company-list-compact">
+              <div class="company-item-compact"><img
+                  src="https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png"
+                  class="company-logo-tiny" style="object-position: -90px 0; width: 60px; height: 20px;"> Myntra</div>
+              <div class="company-item-compact"><img src="https://zerodha.com/static/images/logo.svg"
+                  class="company-logo-tiny"> Zerodha</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Sharechat_Logo.svg"
+                  class="company-logo-tiny"> ShareChat</div>
+              <div class="company-item-compact">🚀 SaaS startups</div>
+            </div>
+          </div>
+
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">💰 Salary (India)</h3>
+            <div class="salary-table-compact">
+              <div class="salary-row-compact entry">
+                <span class="level-text">Entry</span>
+                <span class="salary-text">₹4-8L</span>
+              </div>
+              <div class="salary-row-compact mid">
+                <span class="level-text">Mid</span>
+                <span class="salary-text">₹9-16L</span>
+              </div>
+              <div class="salary-row-compact senior">
+                <span class="level-text">Senior</span>
+                <span class="salary-text">₹18-30L</span>
+              </div>
+            </div>
+            <p class="note-text fragment">Stable demand</p>
+          </div>
+        </div>
+
+        <div class="market-tag fragment"><span class="badge-high">High Demand</span> <span class="badge-neutral">Great
+            for web devs</span></div>
+      </section>
+
+      <!-- Slide 14 — KMP Career -->
+      <section class="slide-career-kmp">
+        <div class="career-header-compact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="KMP"
+            class="career-logo-small">
+          <div>
+            <h2>Kotlin Multiplatform (KMP)</h2>
+            <div class="demand-rating"><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span
+                class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span></div>
+          </div>
+        </div>
+
+        <div class="career-grid-compact">
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">🏢 Top Companies</h3>
+            <div class="company-list-compact">
+              <div class="company-item-compact">💳 Juspay</div>
+              <div class="company-item-compact">💰 Cashfree</div>
+              <div class="company-item-compact">🏦 Enterprise fintech</div>
+              <div class="company-item-compact">🌍 Global teams</div>
+            </div>
+          </div>
+
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">💰 Salary (India)</h3>
+            <div class="salary-table-compact">
+              <div class="salary-row-compact entry">
+                <span class="level-text">Entry</span>
+                <span class="salary-text">Rare</span>
+              </div>
+              <div class="salary-row-compact mid">
+                <span class="level-text">Mid</span>
+                <span class="salary-text">₹15-25L</span>
+              </div>
+              <div class="salary-row-compact senior">
+                <span class="level-text">Senior</span>
+                <span class="salary-text">₹28-45L</span>
+              </div>
+            </div>
+            <p class="note-text fragment">Needs Android background</p>
+          </div>
+        </div>
+
+        <div class="market-tag fragment"><span class="badge-medium">Emerging</span> <span class="badge-neutral">Limited
+            roles</span></div>
+      </section>
+
+
+
+      <!-- Slide 16 — Comparison Table -->
+      <section class="slide-career-comparison">
+        <h2>Career Comparison (India 2025)</h2>
+
+        <table class="career-table-compact">
+          <thead>
+            <tr>
+              <th>Tech</th>
+              <th>Demand</th>
+              <th>Entry Jobs</th>
+              <th>Growth</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="fragment fade-up">
+              <td class="tech-col"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg"
+                  class="table-logo"> Android</td>
+              <td>🔥🔥🔥🔥🔥</td>
+              <td><span class="badge-pos">High</span></td>
+              <td><span class="badge-pos">V.Strong</span></td>
+              <td><span class="badge-pos">High</span></td>
+            </tr>
+            <tr class="fragment fade-up">
+              <td class="tech-col"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                  class="table-logo filter-white"> iOS</td>
+              <td>🔥🔥🔥🔥</td>
+              <td><span class="badge-neu">Medium</span></td>
+              <td><span class="badge-pos">Strong</span></td>
+              <td><span class="badge-pos">V.High</span></td>
+            </tr>
+            <tr class="fragment fade-up">
+              <td class="tech-col"><img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png"
+                  class="table-logo"> Flutter</td>
+              <td>🔥🔥🔥🔥</td>
+              <td><span class="badge-pos">V.High</span></td>
+              <td><span class="badge-pos">Strong</span></td>
+              <td><span class="badge-neu">Medium</span></td>
+            </tr>
+            <tr class="fragment fade-up">
+              <td class="tech-col"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                  class="table-logo"> RN</td>
+              <td>🔥🔥🔥</td>
+              <td><span class="badge-pos">High</span></td>
+              <td><span class="badge-neu">Stable</span></td>
+              <td><span class="badge-neu">Medium</span></td>
+            </tr>
+            <tr class="fragment fade-up">
+              <td class="tech-col"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png"
+                  class="table-logo"> KMP</td>
+              <td>🔥🔥</td>
+              <td><span class="badge-neg">Low</span></td>
+              <td><span class="badge-pos">High</span></td>
+              <td><span class="badge-pos">V.High</span></td>
+            </tr>
+            <tr class="fragment fade-up">
+              <td class="tech-col">CMP</td>
+              <td>🔥</td>
+              <td><span class="badge-neg">V.Low</span></td>
+              <td><span class="badge-neg">Exp</span></td>
+              <td><span class="badge-neu">Unclear</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+
+
+
+
+
+
+
+
+      <!-- 
+        SECTION 7: WHAT SHOULD YOU CHOOSE?
+        Slide 16 — Decision Guide
+      -->
+      <section class="slide-decision">
+        <h2>What Should You Choose?</h2>
+      </section>
+
+      <!-- 
+        SECTION 8: LEARNING PATH
+        Slide 17 — Where to Start?
+      -->
+      <section class="slide-roadmap">
+        <h2>Learning Path</h2>
+
+        <div class="roadmap-timeline">
+          <div class="milestone fragment fade-right">
+            <div class="marker">🤖</div>
+            <div class="content">
+              <h4>Android</h4>
+              <p>developer.android.com</p>
+            </div>
+          </div>
+          <div class="milestone fragment fade-right">
+            <div class="marker">🐦</div>
+            <div class="content">
+              <h4>Flutter</h4>
+              <p>flutter.dev (Docs)</p>
+            </div>
+          </div>
+          <div class="milestone fragment fade-right">
+            <div class="marker">⚛️</div>
+            <div class="content">
+              <h4>React Native</h4>
+              <p>JS → React → RN</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="golden-rule fragment pulse">
+          ⚠️ Rule: Do not just watch tutorials. <strong>Build Projects.</strong>
+        </div>
+      </section>
+
+      <!-- FINAL CLOSING SLIDE -->
+      <section class="slide-closing" data-state="closing-state">
+        <h1 class="closing-title">Technology does not decide your success.</h1>
+        <h2 class="fragment fade-up">Depth of understanding does.</h2>
+
+        <div class="closing-actions fragment fade-up">
+          <p>Choose one path.</p>
+          <p>Go deep.</p>
+          <p>Build.</p>
+          <p>Ship.</p>
+          <p>Repeat.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
