@@ -350,20 +350,60 @@ body {
 .info-card {
   background: var(--card-bg);
   border: var(--glass-border);
+  margin: 30px 0;
+}
+
+.career-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.company-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.company-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.company-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(5px);
+}
+
+.company-icon {
+  font-size: 1.5rem;
+}
+
+.salary-table {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.salary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px 20px;
   border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.info-card h4 {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 5px;
-}
-
-.info-card p {
-  font-size: 1.2rem;
-  margin: 0;
   font-weight: 600;
 }
 
@@ -1900,4 +1940,903 @@ svg.tech-logo-small {
 .cmp-source img {
   height: 40px;
   width: auto;
+}
+
+   
+
+/* CAREER SLIDES STYLING */
+.career-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.career-tech-logo {
+  height: 80px;
+  width: auto;
+}
+
+.career-tech-logo svg {
+  height: 80px;
+  width: auto;
+}
+
+.career-header-text h2 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+.demand-rating {
+  display: flex;
+  gap: 5px;
+}
+
+.fire-icon {
+  font-size: 1.5rem;
+}
+
+.fire-icon.dim {
+  opacity: 0.3;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 30px 0;
+}
+
+.highlight-text {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(61, 220, 132, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--accent-color);
+}
+
+.market-demand {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.demand-badge {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.demand-badge.high {
+  background: linear-gradient(135deg, rgba(61, 220, 132, 0.2), rgba(61, 220, 132, 0.1));
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.demand-badge.medium {
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.2), rgba(66, 133, 244, 0.1));
+  border-color: #4285f4;
+  color: #61dafb;
+}
+
+.demand-badge.low {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 193, 7, 0.1));
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+.salary-row.entry-level {
+  background: linear-gradient(135deg, rgba(61, 220, 132, 0.1), rgba(61, 220, 132, 0.05));
+  border-left: 3px solid rgba(61, 220, 132, 0.5);
+}
+
+.salary-row.mid-level {
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(66, 133, 244, 0.05));
+  border-left: 3px solid rgba(66, 133, 244, 0.5);
+}
+
+.salary-row.senior-level {
+  background: linear-gradient(135deg, rgba(187, 134, 252, 0.1), rgba(187, 134, 252, 0.05));
+  border-left: 3px solid rgba(187, 134, 252, 0.5);
+}
+
+.level-badge {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.salary-amount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+/* Career Comparison Table */
+.career-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+}
+
+.career-comparison-table th,
+.career-comparison-table td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.career-comparison-table th {
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 700;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+
+.career-comparison-table .tech-name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.small-logo {
+  height: 30px;
+  width: auto;
+}
+
+.rating-stars {
+  font-size: 1.2rem;
+}
+
+.badge-positive {
+  background: linear-gradient(135deg, rgba(61, 220, 132, 0.2), rgba(61, 220, 132, 0.1));
+  color: var(--accent-color);
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.badge-neutral {
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.2), rgba(66, 133, 244, 0.1));
+  color: #61dafb;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.badge-negative {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 193, 7, 0.1));
+  color: #ffc107;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.career-comparison-table tr {
+  transition: all 0.3s;
+}
+
+.career-comparison-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* COMPACT CAREER SLIDES STYLING */
+.career-header-compact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.career-logo-small {
+  height: 50px !important;
+  width: auto !important;
+  max-height: 50px !important;
+}
+
+.career-header-compact h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.career-grid-compact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.career-section-compact {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.section-title-small {
+  font-size: 1rem;
+  margin: 0 0 12px 0;
+  color: var(--accent-color);
+}
+
+.company-list-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.company-item-compact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.company-logo-tiny {
+  height: 16px !important;
+  width: auto !important;
+  max-width: 50px !important;
+  max-height: 16px !important;
+  object-fit: contain;
+}
+
+.salary-table-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.salary-row-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.salary-row-compact.entry {
+  background: linear-gradient(135deg, rgba(61, 220, 132, 0.08), rgba(61, 220, 132, 0.03));
+  border-left: 2px solid rgba(61, 220, 132, 0.4);
+}
+
+.salary-row-compact.mid {
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.08), rgba(66, 133, 244, 0.03));
+  border-left: 2px solid rgba(66, 133, 244, 0.4);
+}
+
+.salary-row-compact.senior {
+  background: linear-gradient(135deg, rgba(187, 134, 252, 0.08), rgba(187, 134, 252, 0.03));
+  border-left: 2px solid rgba(187, 134, 252, 0.4);
+}
+
+.level-text {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+}
+
+.salary-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.note-text {
+  margin: 12px 0 0 0;
+  padding: 8px;
+  background: rgba(61, 220, 132, 0.05);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.market-tag {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.badge-high,
+.badge-medium,
+.badge-low,
+.badge-neutral {
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.badge-high {
+  background: linear-gradient(135deg, rgba(61, 220, 132, 0.15), rgba(61, 220, 132, 0.05));
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.badge-medium {
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.15), rgba(66, 133, 244, 0.05));
+  border: 1px solid #4285f4;
+  color: #61dafb;
+}
+
+.badge-low {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 193, 7, 0.05));
+  border: 1px solid #ffc107;
+  color: #ffc107;
+}
+
+/* Compact Comparison Table */
+.career-table-compact {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.85rem;
+}
+
+.career-table-compact th,
+.career-table-compact td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.career-table-compact th {
+  background: rgba(255, 255, 255, 0.03);
+  font-weight: 700;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+}
+
+.tech-col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.table-logo {
+  height: 20px !important;
+  width: auto !important;
+  max-height: 20px !important;
+}
+
+.badge-pos,
+.badge-neu,
+.badge-neg {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  display: inline-block;
+}
+
+.badge-pos {
+  background: linear-gradient(135deg, rgba(61, 220, 132, 0.15), rgba(61, 220, 132, 0.05));
+  color: var(--accent-color);
+}
+
+.badge-neu {
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.15), rgba(66, 133, 244, 0.05));
+  color: #61dafb;
+}
+
+.badge-neg {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 193, 7, 0.05));
+  color: #ffc107;
+}
+
+.career-table-compact tbody tr {
+  transition: all 0.2s;
+}
+
+.career-table-compact tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ============================================
+   KMP AND CMP SLIDES STYLING
+   ============================================ */
+
+/* Tech Grid Layout */
+.tech-grid-large {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+  width: 85%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Glass Card Sections */
+.lang-section,
+.ide-section,
+.framework-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.lang-section h3,
+.ide-section h3,
+.framework-section h3 {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+}
+
+/* Logo Content Layout */
+.lang-content-large,
+.ide-content-large,
+.framework-content-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Logo Sizes - CRITICAL FIX */
+.lang-logo-large,
+.ide-logo-large,
+.framework-logo-large {
+  height: 40px !important;
+  width: auto !important;
+  max-height: 40px !important;
+  max-width: 40px !important;
+  object-fit: contain;
+}
+
+.lang-name-large,
+.ide-name-large,
+.framework-name-large {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* KMP Architecture */
+.kmp-architecture-wrapper {
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.kmp-top-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.shared-logic-badge-center {
+  background: linear-gradient(135deg, rgba(124, 77, 255, 0.25), rgba(66, 133, 244, 0.25));
+  border: 2px solid rgba(124, 77, 255, 0.5);
+  border-radius: 25px;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+  position: relative;
+}
+
+.badge-icon-small {
+  height: 25px !important;
+  width: auto !important;
+  max-height: 25px !important;
+}
+
+.shared-logic-badge-center strong {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  display: block;
+  margin: 0;
+}
+
+.shared-logic-badge-center p {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 2px 0 0 0;
+}
+
+/* Connecting Lines */
+.kmp-connector-lines {
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+  display: block;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+/* Platforms Container with Side Label */
+.kmp-platforms-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kmp-side-label {
+  writing-mode: horizontal-tb;
+  text-align: left;
+  min-width: 100px;
+}
+
+.kmp-side-label strong {
+  font-size: 0.85rem;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.kmp-platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  flex: 1;
+}
+
+.kmp-platform-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 18px 10px 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.kmp-platform-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px);
+}
+
+/* Circular Icon Containers */
+.platform-icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid;
+  position: relative;
+}
+
+.platform-icon-circle img {
+  height: 25px !important;
+  width: auto !important;
+  max-height: 25px !important;
+}
+
+.icon-emoji {
+  font-size: 1.5rem;
+}
+
+/* Platform-specific colors */
+.android-circle {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(61, 220, 132, 0.3);
+}
+
+.ios-circle {
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.web-circle {
+  border-color: #4285f4;
+  box-shadow: 0 0 15px rgba(66, 133, 244, 0.3);
+}
+
+.desktop-circle {
+  border-color: #9b59b6;
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.3);
+}
+
+.server-circle {
+  border-color: #f39c12;
+  box-shadow: 0 0 15px rgba(243, 156, 18, 0.3);
+}
+
+.platform-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.platform-tech {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bottom-label {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bottom-label p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+}
+
+/* Responsive for KMP */
+@media (max-width: 900px) {
+  .kmp-platforms-container {
+    flex-direction: column;
+  }
+
+  .kmp-side-label {
+    writing-mode: horizontal-tb;
+    text-align: center;
+    min-width: auto;
+  }
+
+  .kmp-platforms-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .kmp-platforms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cmp-architecture {
+  margin-top: 20px;
+  width: 90%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CMP Top Section */
+.cmp-top-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.shared-ui-badge-cmp {
+  background: linear-gradient(135deg, rgba(124, 77, 255, 0.25), rgba(66, 133, 244, 0.25));
+  border: 2px solid rgba(124, 77, 255, 0.5);
+  border-radius: 25px;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+  position: relative;
+}
+
+.badge-icon-cmp {
+  height: 25px !important;
+  width: auto !important;
+  max-height: 25px !important;
+}
+
+.shared-ui-badge-cmp strong {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  display: block;
+  margin: 0;
+}
+
+.shared-ui-badge-cmp p {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 2px 0 0 0;
+}
+
+/* CMP Flow Wrapper */
+.cmp-flow-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cmp-side-label {
+  writing-mode: horizontal-tb;
+  text-align: left;
+  min-width: 100px;
+}
+
+.cmp-side-label strong {
+  font-size: 0.85rem;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* Shared Logic/UI Badge */
+.shared-logic-badge,
+.shared-ui-badge {
+  background: linear-gradient(135deg, rgba(124, 77, 255, 0.2), rgba(66, 133, 244, 0.2));
+  border: 2px solid rgba(124, 77, 255, 0.4);
+  border-radius: 25px;
+  padding: 15px 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.badge-icon {
+  height: 30px !important;
+  width: auto !important;
+  max-height: 30px !important;
+}
+
+.shared-logic-badge strong,
+.shared-ui-badge strong {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  display: block;
+}
+
+.shared-logic-badge p,
+.shared-ui-badge p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 5px 0 0 0;
+}
+
+/* Platform Target Flow */
+.kmp-flow,
+.cmp-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cmp-flow {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  flex: 1;
+}
+
+.kmp-target,
+.cmp-target {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 18px 10px 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.kmp-target:hover,
+.cmp-target:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.target-icon {
+  height: 40px !important;
+  width: auto !important;
+  max-height: 40px !important;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.target-icon-text {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.kmp-target span,
+.cmp-target span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+}
+
+.kmp-target small,
+.cmp-target small {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.kmp-note,
+.cmp-note {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: rgba(61, 220, 132, 0.1);
+  border-left: 3px solid var(--accent-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.kmp-note strong,
+.cmp-note strong {
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+/* Responsive Design for KMP/CMP */
+@media (max-width: 768px) {
+  .tech-grid-large {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .kmp-flow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .cmp-flow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .kmp-target,
+  .cmp-target {
+    padding: 15px 8px;
+  }
+
+  .target-icon {
+    height: 30px !important;
+  }
 }

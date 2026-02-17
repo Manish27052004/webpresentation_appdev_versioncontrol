@@ -578,393 +578,543 @@
           <h2>Kotlin Multiplatform</h2>
         </div>
 
-        <div class="flutter-refine-grid">
-          <!-- Row 1: Compact Language & IDE -->
-          <div class="compact-row">
-            <div class="detail-card glass-card compact fragment fade-down">
-              <div class="card-label">Language</div>
-              <div class="horizontal-content">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
-                  class="card-logo small">
-                <h4>Kotlin</h4>
-              </div>
-            </div>
-
-            <div class="detail-card glass-card compact fragment fade-down">
-              <div class="card-label">IDE</div>
-              <div class="horizontal-content">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"
-                  alt="Android Studio" class="card-logo small">
-                <h4>Android Studio</h4>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 2: Architecture Flow (Shared Logic -> Native UI & Server) -->
-          <div class="ui-section glass-card fragment fade-up">
-            <h3>Shared Logic & Native UI</h3>
-            <div class="kmp-flow-container">
-              <!-- Step 1: Shared Core -->
-              <div class="source-node">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
-                  class="source-logo">
-                <div class="node-label">
-                  <strong>Shared Business Logic</strong>
-                  <span class="sub-label">Networking, Data, Models</span>
-                </div>
-              </div>
-
-              <!-- Step 2: Animated Flow Lines (SVG Tree) -->
-              <div class="tree-lines-container">
-                <svg class="tree-svg" viewBox="0 0 800 100" preserveAspectRatio="none">
-                  <!-- Main Vertical Trunk -->
-                  <line x1="400" y1="0" x2="400" y2="40" class="tree-path trunk" />
-                  <!-- Horizontal Bar -->
-                  <line x1="80" y1="40" x2="720" y2="40" class="tree-path branch-bar" />
-                  <!-- Vertical Drops to Targets (approx positions based on % width) -->
-                  <!-- 5 targets: ~10%, 30%, 50%, 70%, 90% in container -->
-                  <line x1="80" y1="40" x2="80" y2="100" class="tree-path drop-line" /> <!-- Android -->
-                  <line x1="240" y1="40" x2="240" y2="100" class="tree-path drop-line" /> <!-- iOS -->
-                  <line x1="400" y1="40" x2="400" y2="100" class="tree-path drop-line" /> <!-- Web -->
-                  <line x1="560" y1="40" x2="560" y2="100" class="tree-path drop-line" /> <!-- Desktop -->
-                  <line x1="720" y1="40" x2="720" y2="100" class="tree-path drop-line" /> <!-- Server -->
-                </svg>
-              </div>
-
-              <!-- Step 3: Targets (5 Columns) -->
-              <div class="target-nodes-row">
-                <!-- Android (1) -->
-                <div class="target-node">
-                  <div class="node-icon-wrapper android-wrapper">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android"
-                      class="target-icon">
-                  </div>
-                  <strong>Android</strong>
-                  <span class="sub-label">Compose</span>
-                </div>
-
-                <!-- iOS (2) -->
-                <div class="target-node">
-                  <div class="node-icon-wrapper ios-wrapper">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
-                      class="target-icon filter-white">
-                  </div>
-                  <strong>iOS</strong>
-                  <span class="sub-label">SwiftUI</span>
-                </div>
-
-                <!-- Web (3) -->
-                <div class="target-node">
-                  <div class="node-icon-wrapper web-wrapper">
-                    <svg class="target-icon filter-white" viewBox="0 0 24 24" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M2 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path
-                        d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                  <strong>Web</strong>
-                  <span class="sub-label">Wasm</span>
-                </div>
-
-                <!-- Desktop (4) -->
-                <div class="target-node">
-                  <div class="node-icon-wrapper desktop-wrapper">
-                    <svg class="target-icon filter-white" viewBox="0 0 24 24" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M20 3H4C2.89543 3 2 3.89543 2 5V15C2 16.1046 2.89543 17 4 17H20C21.1046 17 22 16.1046 22 15V5C22 3.89543 21.1046 3 20 3Z"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                  <strong>Desktop</strong>
-                  <span class="sub-label">Compose</span>
-                </div>
-
-                <!-- Server (5) -->
-                <div class="target-node">
-                  <div class="node-icon-wrapper server-wrapper">
-                    <svg class="target-icon filter-white" viewBox="0 0 24 24" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M20 17V7C20 5.89543 16.4183 5 12 5C7.58172 5 4 5.89543 4 7V17C4 18.1046 7.58172 19 12 19C16.4183 19 20 18.1046 20 17Z"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M4 12C4 13.1046 7.58172 14 12 14C16.4183 14 20 13.1046 20 12" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M4 7C4 8.10457 7.58172 9 12 9C16.4183 9 20 8.10457 20 7" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </div>
-                  <strong>Server</strong>
-                  <span class="sub-label">Ktor</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <aside class="notes">
-            KMP shares business logic (Kotlin) across Android, iOS, Web, Desktop, and Server.
-            UI remains native (Compose for Android, SwiftUI for iOS).
-            Shared logic can also run on the Server (using Ktor).
-          </aside>
-      </section>
-
-      <!-- New Slide: Compose Multiplatform (CMP) -->
-      <section class="slide-cmp">
-        <div class="cmp-bg"></div>
-        <h2>Compose Multiplatform</h2>
-
-        <!-- Row 1: Compact Language & IDE -->
-        <div class="compact-row">
-          <div class="detail-card glass-card compact fragment fade-down">
-            <div class="card-label">Language</div>
-            <div class="horizontal-content">
+        <div class="tech-grid-large">
+          <!-- Row 1: Language & IDE -->
+          <div class="lang-section glass-card fragment fade-up">
+            <h3>LANGUAGE</h3>
+            <div class="lang-content-large">
               <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
-                class="card-logo small">
-              <h4>Kotlin</h4>
+                class="lang-logo-large">
+              <span class="lang-name-large">Kotlin</span>
             </div>
           </div>
 
-          <div class="detail-card glass-card compact fragment fade-down">
-            <div class="card-label">Framework</div>
-            <div class="horizontal-content">
-              <svg class="card-logo small" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid" viewBox="0 0 256 286">
-                <g>
-                  <path
-                    d="M126.936447,0 C132.248668,0.0898888717 137.461706,1.50609469 142.101338,4.12642434 L238.728264,58.6996903 C242.621093,60.900739 246.093763,63.8389207 248.878533,67.2810746 L248.973797,67.2235591 L250.413292,69.3359044 L250.582936,69.5780905 L252.380855,72.2283741 L252.253001,72.3053396 C254.639378,76.6515952 255.951737,81.3961523 256,86.2217925 L256,197.16289 C256.050677,202.765033 254.627851,208.283365 251.872071,213.166244 C249.116035,218.046161 245.12457,222.114728 240.298084,224.963588 L144.71948,281.356674 C140.735992,283.710907 136.312533,285.148087 131.750523,285.613117 L131.749909,285.754833 L125.636634,285.80414 L125.640463,285.652951 C121.135833,285.248224 116.755019,283.890235 112.794389,281.655028 L11.2694511,224.308536 C4.37243872,220.425938 0.0790250697,213.147718 0,205.195715 L0,87.7070848 C0.0569097513,83.5626721 0.77879485,79.5635018 2.14601289,75.8855822 L2.03202819,75.8205459 L4.64840431,70.3544915 L4.79640495,70.4361276 C7.23099819,66.4903554 10.5322304,63.2174645 14.5962669,60.8160592 L110.17659,4.43345785 C115.000734,1.58291522 120.492161,0.0539760447 126.097959,0 L126.936447,0 Z M7.49945182,78.8820889 L7.28521886,79.5616891 C6.4340505,82.3767819 6.01390702,85.4179918 6.045975,88.5877889 L6.04582517,205.165618 C6.10319945,210.928054 9.22442514,216.219175 14.2391359,219.042155 L115.766906,276.390244 C118.784145,278.093042 122.102725,279.1679 125.522661,279.563073 L125.734484,279.583331 L125.758025,274.651283 L125.778831,253.964695 L125.745811,230.483385 L125.609399,230.470071 C123.51173,230.193405 121.466676,229.593388 119.547186,228.688967 L118.833405,228.335577 L118.201774,227.993311 L56.6950715,193.252169 C54.4589745,191.991063 52.5954971,190.164257 51.2917964,187.954781 C49.9883957,185.748011 49.2894936,183.234446 49.2629184,180.636668 L49.2630647,110.021849 C49.2409613,107.775105 49.5233834,105.5853 50.1039354,103.520321 L50.3002585,102.859394 L7.49945182,78.8820889 Z M247.057049,75.4090975 L204.857365,100.612002 L204.950299,100.804711 C205.99211,103.052811 206.601286,105.446047 206.716557,107.890144 L206.735703,108.557906 L206.733817,175.758492 C206.768615,179.363147 205.853347,182.913482 204.080341,186.050496 C202.308405,189.189237 199.740539,191.806435 196.636213,193.637926 L138.734874,227.801198 C136.731674,228.985395 134.553731,229.807265 132.292637,230.251351 L131.796163,230.339606 L131.805294,235.118109 L131.826616,262.796333 L131.785861,279.052114 L131.780459,279.522261 L132.68362,279.393758 C135.570625,278.923408 138.364095,277.967822 140.94634,276.54903 L141.645263,276.150619 L237.2253,219.756687 C241.137601,217.44743 244.37338,214.149147 246.607218,210.193848 C248.841339,206.23528 249.994762,201.761808 249.950901,197.191948 L249.95279,86.2511882 C249.919405,82.8237127 249.055086,79.3993766 247.457382,76.1798309 L247.057049,75.4090975 Z M124.000068,86.5846779 C123.085756,86.8551328 122.206342,87.2372594 121.384508,87.7205884 L82.5716168,110.616774 C81.4426858,111.28157 80.4515996,112.15575 79.6507042,113.190458 C79.3366275,113.595268 79.0557035,114.021016 78.8044422,114.464213 C78.6788115,114.687556 78.5601603,114.912645 78.4484886,115.144712 L78.2391042,115.664684 C77.7557752,116.814553 77.4347191,118.044686 77.3090884,119.33589 C77.2637218,119.829689 77.2410385,120.330466 77.2455326,120.836479 L77.2455326,168.192254 C77.2602321,169.554998 77.6318894,170.891568 78.3246029,172.067611 C79.0173163,173.241908 80.0084025,174.213801 81.1966591,174.882086 L122.426195,198.170868 C124.214687,199.181147 126.238737,199.704609 128.292449,199.68716 L128.732156,199.669711 L128.734523,212.419788 L128.762691,224.583979 L128.733901,199.667966 C130.648023,199.585957 132.51329,199.034578 134.165682,198.060941 L172.978573,175.161265 C174.753106,174.114343 176.220542,172.618989 177.234311,170.825263 C177.396584,170.537359 177.541408,170.240731 177.679253,169.938869 C178.398139,168.370231 178.764562,166.665493 178.750603,164.939816 L178.752348,119.878545 C178.743624,119.058456 178.633697,118.252326 178.434782,117.470624 C178.303916,116.948908 178.131174,116.437661 177.923535,115.940373 C177.820587,115.692601 177.707171,115.44832 177.586775,115.207528 C177.443696,114.923114 177.286657,114.645679 177.122639,114.37348 L176.945971,114.088848 L176.763196,113.808142 C176.480527,113.394608 176.175175,112.996777 175.847139,112.619885 C174.856053,111.47874 173.676521,110.515572 172.360889,109.768767 L133.122249,87.6089167 C131.551866,86.7207778 129.798272,86.207786 127.995821,86.1083284 C126.647036,86.0350439 125.294762,86.1955719 124.000068,86.5846779 Z M126.15721,6.04568457 C121.612331,6.08944562 117.161695,7.32860479 113.250368,9.63977158 L17.6700459,66.0223719 C14.7613001,67.741126 12.3531724,70.018758 10.4920261,72.7608334 L10.0757673,73.3955174 L52.9751444,97.4153996 L53.4214856,96.8090303 C54.7178619,95.1165744 56.2960361,93.6596009 58.129235,92.4880103 L58.6925283,92.1417696 L116.595701,57.9819347 C119.698606,56.1480278 123.230768,55.1639559 126.835964,55.1291725 C130.440618,55.0943746 133.990954,56.0096423 137.128583,57.7829959 L195.667973,90.8487041 C197.684571,91.9885205 199.525027,93.4381714 201.110077,95.1360846 L201.503725,95.5710719 L243.619655,70.4170241 L243.157314,69.8902789 C241.219143,67.7453654 238.942317,65.8694128 236.441336,64.3645133 L235.753778,63.9633625 L139.128129,9.39081817 C135.168501,7.15453514 130.69548,6.00042673 126.15721,6.04568457 Z"
-                    fill="#4285F4" />
-                </g>
-              </svg>
-              <h4>Jetpack Compose</h4>
+          <div class="ide-section glass-card fragment fade-up">
+            <h3>IDE</h3>
+            <div class="ide-content-large">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"
+                alt="Android Studio" class="ide-logo-large">
+              <span class="ide-name-large">Android Studio</span>
             </div>
           </div>
         </div>
 
-        <!-- Row 2: Shared UI Flow (Central Concept) -->
-        <div class="ui-section glass-card fragment fade-up">
-          <h3>Shared UI Codebase</h3>
-          <div class="kmp-flow-container">
-            <!-- Step 1: Shared UI Core -->
-            <div class="source-node cmp-source">
-              <svg class="source-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
-                viewBox="0 0 256 286">
-                <g>
-                  <path
-                    d="M126.936447,0 C132.248668,0.0898888717 137.461706,1.50609469 142.101338,4.12642434 L238.728264,58.6996903 C242.621093,60.900739 246.093763,63.8389207 248.878533,67.2810746 L248.973797,67.2235591 L250.413292,69.3359044 L250.582936,69.5780905 L252.380855,72.2283741 L252.253001,72.3053396 C254.639378,76.6515952 255.951737,81.3961523 256,86.2217925 L256,197.16289 C256.050677,202.765033 254.627851,208.283365 251.872071,213.166244 C249.116035,218.046161 245.12457,222.114728 240.298084,224.963588 L144.71948,281.356674 C140.735992,283.710907 136.312533,285.148087 131.750523,285.613117 L131.749909,285.754833 L125.636634,285.80414 L125.640463,285.652951 C121.135833,285.248224 116.755019,283.890235 112.794389,281.655028 L11.2694511,224.308536 C4.37243872,220.425938 0.0790250697,213.147718 0,205.195715 L0,87.7070848 C0.0569097513,83.5626721 0.77879485,79.5635018 2.14601289,75.8855822 L2.03202819,75.8205459 L4.64840431,70.3544915 L4.79640495,70.4361276 C7.23099819,66.4903554 10.5322304,63.2174645 14.5962669,60.8160592 L110.17659,4.43345785 C115.000734,1.58291522 120.492161,0.0539760447 126.097959,0 L126.936447,0 Z M7.49945182,78.8820889 L7.28521886,79.5616891 C6.4340505,82.3767819 6.01390702,85.4179918 6.045975,88.5877889 L6.04582517,205.165618 C6.10319945,210.928054 9.22442514,216.219175 14.2391359,219.042155 L115.766906,276.390244 C118.784145,278.093042 122.102725,279.1679 125.522661,279.563073 L125.734484,279.583331 L125.758025,274.651283 L125.778831,253.964695 L125.745811,230.483385 L125.609399,230.470071 C123.51173,230.193405 121.466676,229.593388 119.547186,228.688967 L118.833405,228.335577 L118.201774,227.993311 L56.6950715,193.252169 C54.4589745,191.991063 52.5954971,190.164257 51.2917964,187.954781 C49.9883957,185.748011 49.2894936,183.234446 49.2629184,180.636668 L49.2630647,110.021849 C49.2409613,107.775105 49.5233834,105.5853 50.1039354,103.520321 L50.3002585,102.859394 L7.49945182,78.8820889 Z M247.057049,75.4090975 L204.857365,100.612002 L204.950299,100.804711 C205.99211,103.052811 206.601286,105.446047 206.716557,107.890144 L206.735703,108.557906 L206.733817,175.758492 C206.768615,179.363147 205.853347,182.913482 204.080341,186.050496 C202.308405,189.189237 199.740539,191.806435 196.636213,193.637926 L138.734874,227.801198 C136.731674,228.985395 134.553731,229.807265 132.292637,230.251351 L131.796163,230.339606 L131.805294,235.118109 L131.826616,262.796333 L131.785861,279.052114 L131.780459,279.522261 L132.68362,279.393758 C135.570625,278.923408 138.364095,277.967822 140.94634,276.54903 L141.645263,276.150619 L237.2253,219.756687 C241.137601,217.44743 244.37338,214.149147 246.607218,210.193848 C248.841339,206.23528 249.994762,201.761808 249.950901,197.191948 L249.95279,86.2511882 C249.919405,82.8237127 249.055086,79.3993766 247.457382,76.1798309 L247.057049,75.4090975 Z M124.000068,86.5846779 C123.085756,86.8551328 122.206342,87.2372594 121.384508,87.7205884 L82.5716168,110.616774 C81.4426858,111.28157 80.4515996,112.15575 79.6507042,113.190458 C79.3366275,113.595268 79.0557035,114.021016 78.8044422,114.464213 C78.6788115,114.687556 78.5601603,114.912645 78.4484886,115.144712 L78.2391042,115.664684 C77.7557752,116.814553 77.4347191,118.044686 77.3090884,119.33589 C77.2637218,119.829689 77.2410385,120.330466 77.2455326,120.836479 L77.2455326,168.192254 C77.2602321,169.554998 77.6318894,170.891568 78.3246029,172.067611 C79.0173163,173.241908 80.0084025,174.213801 81.1966591,174.882086 L122.426195,198.170868 C124.214687,199.181147 126.238737,199.704609 128.292449,199.68716 L128.732156,199.669711 L128.734523,212.419788 L128.762691,224.583979 L128.733901,199.667966 C130.648023,199.585957 132.51329,199.034578 134.165682,198.060941 L172.978573,175.161265 C174.753106,174.114343 176.220542,172.618989 177.234311,170.825263 C177.396584,170.537359 177.541408,170.240731 177.679253,169.938869 C178.398139,168.370231 178.764562,166.665493 178.750603,164.939816 L178.752348,119.878545 C178.743624,119.058456 178.633697,118.252326 178.434782,117.470624 C178.303916,116.948908 178.131174,116.437661 177.923535,115.940373 C177.820587,115.692601 177.707171,115.44832 177.586775,115.207528 C177.443696,114.923114 177.286657,114.645679 177.122639,114.37348 L176.945971,114.088848 L176.763196,113.808142 C176.480527,113.394608 176.175175,112.996777 175.847139,112.619885 C174.856053,111.47874 173.676521,110.515572 172.360889,109.768767 L133.122249,87.6089167 C131.551866,86.7207778 129.798272,86.207786 127.995821,86.1083284 C126.647036,86.0350439 125.294762,86.1955719 124.000068,86.5846779 Z M126.15721,6.04568457 C121.612331,6.08944562 117.161695,7.32860479 113.250368,9.63977158 L17.6700459,66.0223719 C14.7613001,67.741126 12.3531724,70.018758 10.4920261,72.7608334 L10.0757673,73.3955174 L52.9751444,97.4153996 L53.4214856,96.8090303 C54.7178619,95.1165744 56.2960361,93.6596009 58.129235,92.4880103 L58.6925283,92.1417696 L116.595701,57.9819347 C119.698606,56.1480278 123.230768,55.1639559 126.835964,55.1291725 C130.440618,55.0943746 133.990954,56.0096423 137.128583,57.7829959 L195.667973,90.8487041 C197.684571,91.9885205 199.525027,93.4381714 201.110077,95.1360846 L201.503725,95.5710719 L243.619655,70.4170241 L243.157314,69.8902789 C241.219143,67.7453654 238.942317,65.8694128 236.441336,64.3645133 L235.753778,63.9633625 L139.128129,9.39081817 C135.168501,7.15453514 130.69548,6.00042673 126.15721,6.04568457 Z"
-                    fill="#4285F4" />
-                </g>
-              </svg>
-              <div class="node-label">
-                <strong>Shared UI</strong>
-                <span class="sub-label">Write Once, Run Everywhere</span>
+        <!-- Shared Business Logic Section -->
+        <div class="kmp-architecture-wrapper fragment fade-up">
+          <!-- Center Badge at Top -->
+          <div class="kmp-top-section">
+            <div class="shared-logic-badge-center">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
+                class="badge-icon-small">
+              <div>
+                <strong>Shared Business Logic</strong>
+                <p>Networking, Data, Models</p>
               </div>
             </div>
+          </div>
 
-            <!-- Step 2: Animated Flow Lines (SVG Tree) -->
-            <div class="tree-lines-container">
-              <svg class="tree-svg" viewBox="0 0 640 100" preserveAspectRatio="none">
-                <!-- 4 targets: Android, iOS, Desktop, Web -->
-                <!-- Main Vertical Trunk -->
-                <line x1="320" y1="0" x2="320" y2="40" class="tree-path trunk" />
-                <!-- Horizontal Bar (approx width for 4 items) -->
-                <line x1="80" y1="40" x2="560" y2="40" class="tree-path branch-bar" />
-                <!-- Vertical Drops -->
-                <line x1="80" y1="40" x2="80" y2="100" class="tree-path drop-line" /> <!-- Android -->
-                <line x1="240" y1="40" x2="240" y2="100" class="tree-path drop-line" /> <!-- iOS -->
-                <line x1="400" y1="40" x2="400" y2="100" class="tree-path drop-line" /> <!-- Desktop -->
-                <line x1="560" y1="40" x2="560" y2="100" class="tree-path drop-line" /> <!-- Web -->
-              </svg>
+          <!-- Connecting Lines SVG -->
+          <svg class="kmp-connector-lines" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <line x1="500" y1="0" x2="100" y2="100" stroke="rgba(124, 77, 255, 0.4)" stroke-width="2" />
+            <line x1="500" y1="0" x2="300" y2="100" stroke="rgba(124, 77, 255, 0.4)" stroke-width="2" />
+            <line x1="500" y1="0" x2="500" y2="100" stroke="rgba(124, 77, 255, 0.4)" stroke-width="2" />
+            <line x1="500" y1="0" x2="700" y2="100" stroke="rgba(124, 77, 255, 0.4)" stroke-width="2" />
+            <line x1="500" y1="0" x2="900" y2="100" stroke="rgba(124, 77, 255, 0.4)" stroke-width="2" />
+          </svg>
+
+          <!-- Platform Targets with Side Label -->
+          <div class="kmp-platforms-container">
+            <div class="kmp-side-label">
+              <strong>Shared Logic &<br>Native UI</strong>
             </div>
 
-            <!-- Step 3: Targets (4 Columns) -->
-            <div class="target-nodes-row" style="width: 90%;">
-              <!-- Android -->
-              <div class="target-node">
-                <div class="node-icon-wrapper android-wrapper">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android"
-                    class="target-icon">
+            <div class="kmp-platforms-grid">
+              <div class="kmp-platform-card">
+                <div class="platform-icon-circle android-circle">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android">
                 </div>
-                <strong>Android</strong>
+                <span class="platform-name">Android</span>
+                <span class="platform-tech">Compose</span>
               </div>
 
-              <!-- iOS -->
-              <div class="target-node">
-                <div class="node-icon-wrapper ios-wrapper">
+              <div class="kmp-platform-card">
+                <div class="platform-icon-circle ios-circle">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
-                    class="target-icon filter-white">
+                    class="filter-white">
                 </div>
-                <strong>iOS</strong>
+                <span class="platform-name">iOS</span>
+                <span class="platform-tech">SwiftUI</span>
               </div>
 
-              <!-- Desktop (JVM) -->
-              <div class="target-node">
-                <div class="node-icon-wrapper desktop-wrapper">
-                  <svg class="target-icon filter-white" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M20 3H4C2.89543 3 2 3.89543 2 5V15C2 16.1046 2.89543 17 4 17H20C21.1046 17 22 16.1046 22 15V5C22 3.89543 21.1046 3 20 3Z"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
+              <div class="kmp-platform-card">
+                <div class="platform-icon-circle web-circle">
+                  <span class="icon-emoji">🌐</span>
                 </div>
-                <strong>Desktop</strong>
+                <span class="platform-name">Web</span>
+                <span class="platform-tech">Wasm</span>
               </div>
 
-              <!-- Web (Wasm) -->
-              <div class="target-node">
-                <div class="node-icon-wrapper web-wrapper">
-                  <svg class="target-icon filter-white" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M2 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
+              <div class="kmp-platform-card">
+                <div class="platform-icon-circle desktop-circle">
+                  <span class="icon-emoji">💻</span>
                 </div>
-                <strong>Web</strong>
+                <span class="platform-name">Desktop</span>
+                <span class="platform-tech">Compose</span>
+              </div>
+
+              <div class="kmp-platform-card">
+                <div class="platform-icon-circle server-circle">
+                  <span class="icon-emoji">📦</span>
+                </div>
+                <span class="platform-name">Server</span>
+                <span class="platform-tech">Ktor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-label fragment">
+          <p><strong>Build for Mobile</strong></p>
+        </div>
+
+        <aside class="notes">
+          Kotlin Multiplatform: Share business logic across all platforms.
+          Each platform gets native UI. Networking, data, and models are shared.
+        </aside>
+      </section>
+
+      <!-- Slide 11 — Compose Multiplatform -->
+      <section class="slide-cmp">
+        <div class="header-row center-header">
+          <h2>Compose Multiplatform</h2>
+        </div>
+
+        <div class="tech-grid-large">
+          <!-- Row 1: Language & Framework -->
+          <div class="lang-section glass-card fragment fade-up">
+            <h3>LANGUAGE</h3>
+            <div class="lang-content-large">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin"
+                class="lang-logo-large">
+              <span class="lang-name-large">Kotlin</span>
+            </div>
+          </div>
+
+          <div class="framework-section glass-card fragment fade-up">
+            <h3>FRAMEWORK</h3>
+            <div class="framework-content-large">
+              <img
+                src="https://3.bp.blogspot.com/-VVp3WvJvl84/X0Vu6EjYqDI/AAAAAAAAPjU/ZOMKiUlgfg8ok8DY8Hc-ocOvGdB0z86AgCLcBGAsYHQ/s1600/jetpack%2Bcompose%2Bicon_RGB.png"
+                alt="Jetpack Compose" class="framework-logo-large">
+              <span class="framework-name-large">Jetpack Compose</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shared UI Codebase Section -->
+        <div class="cmp-architecture fragment fade-up">
+          <div class="cmp-top-section">
+            <div class="shared-ui-badge-cmp">
+              <img
+                src="https://3.bp.blogspot.com/-VVp3WvJvl84/X0Vu6EjYqDI/AAAAAAAAPjU/ZOMKiUlgfg8ok8DY8Hc-ocOvGdB0z86AgCLcBGAsYHQ/s1600/jetpack%2Bcompose%2Bicon_RGB.png"
+                alt="Compose" class="badge-icon-cmp">
+              <div>
+                <strong>Shared UI</strong>
+                <p>Write Once, Run Everywhere</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cmp-flow-wrapper">
+            <div class="cmp-side-label">
+              <strong>Shared UI<br>Codebase</strong>
+            </div>
+            <div class="cmp-flow">
+              <div class="cmp-target">
+                <div class="platform-icon-circle android-circle">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android">
+                </div>
+                <span>Android</span>
+              </div>
+              <div class="cmp-target">
+                <div class="platform-icon-circle ios-circle">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+                    class="filter-white">
+                </div>
+                <span>iOS</span>
+              </div>
+              <div class="cmp-target">
+                <div class="platform-icon-circle desktop-circle">
+                  <span class="icon-emoji">💻</span>
+                </div>
+                <span>Desktop</span>
+              </div>
+              <div class="cmp-target">
+                <div class="platform-icon-circle web-circle">
+                  <span class="icon-emoji">🌐</span>
+                </div>
+                <span>Web</span>
               </div>
             </div>
           </div>
         </div>
 
         <aside class="notes">
-          Compose Multiplatform takes KMP further by allowing shared UI.
-          Rendered via Skia (Canvas) on iOS/Desktop/Web, native on Android.
+          Compose Multiplatform: Share both UI and logic across platforms.
+          Truly write once, run everywhere with Jetpack Compose.
         </aside>
       </section>
 
       <!-- 
-        SECTION 4: REAL WORLD EXAMPLES
-        Slide 11 — Native Apps
+        SECTION 4: CAREER OPTIONS IN MOBILE DEVELOPMENT
+
+        Career Opportunities Slides
       -->
-      <section class="slide-examples-native">
-        <h2>Built with Native</h2>
-        <div class="app-grid">
-          <div class="app-icon fragment fade-up">📸 Instagram</div>
-          <div class="app-icon fragment fade-up">🚕 Uber</div>
-          <div class="app-icon fragment fade-up">🗺️ Google Maps</div>
-          <div class="app-icon fragment fade-up">👻 Snapchat</div>
+
+      <!-- Slide 10 — Native Android Career -->
+      <section class="slide-career-android">
+        <div class="career-header-compact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android"
+            class="career-logo-small">
+          <div>
+            <h2>Native Android (Kotlin / Java)</h2>
+            <div class="demand-rating"><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span
+                class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span></div>
+          </div>
         </div>
-        <div class="reasoning fragment">
-          <span class="tag">Performance</span>
-          <span class="tag">Camera Access</span>
-          <span class="tag">Sensors</span>
+
+        <div class="career-grid-compact">
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">🏢 Top Companies</h3>
+            <div class="company-list-compact">
+              <div class="company-item-compact"><img src="https://logowik.com/content/uploads/images/flipkart1670.jpg"
+                  class="company-logo-tiny"> Flipkart</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/2/24/Paytm_Logo_%28standalone%29.svg"
+                  class="company-logo-tiny"> Paytm</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/14/PhonePe_Logo.svg" class="company-logo-tiny">
+                PhonePe</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/en/1/12/Swiggy_logo.svg" class="company-logo-tiny"> Swiggy
+              </div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png" class="company-logo-tiny">
+                Zomato</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/11/Meesho_logo.png" class="company-logo-tiny">
+                Meesho</div>
+            </div>
+          </div>
+
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">💰 Salary (India)</h3>
+            <div class="salary-table-compact">
+              <div class="salary-row-compact entry">
+                <span class="level-text">Entry (0-2y)</span>
+                <span class="salary-text">₹4-8L</span>
+              </div>
+              <div class="salary-row-compact mid">
+                <span class="level-text">Mid (3-5y)</span>
+                <span class="salary-text">₹10-18L</span>
+              </div>
+              <div class="salary-row-compact senior">
+                <span class="level-text">Senior (6+y)</span>
+                <span class="salary-text">₹20-35L+</span>
+              </div>
+            </div>
+            <p class="note-text fragment">Top companies → ₹40L+</p>
+          </div>
         </div>
-        <aside class="notes">Why native? Performance, Deep camera access, Sensor optimization.</aside>
+
+        <div class="market-tag fragment"><span class="badge-high">Very High Demand</span></div>
       </section>
 
-      <!-- Slide 12 — Cross Platform Apps -->
-      <section class="slide-examples-cross">
-        <h2>Built with Cross-Platform</h2>
-        <div class="app-grid">
-          <div class="app-icon fragment fade-up">🛒 Alibaba</div>
-          <div class="app-icon fragment fade-up">🚗 BMW</div>
-          <div class="app-icon fragment fade-up">🎮 Discord</div>
-          <div class="app-icon fragment fade-up">🏏 Dream11</div>
+      <!-- Slide 11 — Native iOS Career -->
+      <section class="slide-career-ios">
+        <div class="career-header-compact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS"
+            class="career-logo-small filter-white">
+          <div>
+            <h2>Native iOS (Swift)</h2>
+            <div class="demand-rating"><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span
+                class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span class="fire-icon dim">🔥</span></div>
+          </div>
         </div>
-        <p class="fragment">Most large companies mix technologies.</p>
-        <aside class="notes">Reality: Most large companies mix technologies.</aside>
+
+        <div class="career-grid-compact">
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">🏢 Top Companies</h3>
+            <div class="company-list-compact">
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                  class="company-logo-tiny filter-white"> Apple India</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/8/8c/CRED_Logo.png" class="company-logo-tiny">
+                CRED</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Ola_Cabs_logo.svg" class="company-logo-tiny">
+                Ola</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/4/43/Byju%27s_logo.svg" class="company-logo-tiny">
+                Byju's</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg" class="company-logo-tiny">
+                Razorpay</div>
+            </div>
+          </div>
+
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">💰 Salary (India)</h3>
+            <div class="salary-table-compact">
+              <div class="salary-row-compact entry">
+                <span class="level-text">Entry</span>
+                <span class="salary-text">₹5-9L</span>
+              </div>
+              <div class="salary-row-compact mid">
+                <span class="level-text">Mid</span>
+                <span class="salary-text">₹12-20L</span>
+              </div>
+              <div class="salary-row-compact senior">
+                <span class="level-text">Senior</span>
+                <span class="salary-text">₹22-40L</span>
+              </div>
+            </div>
+            <p class="note-text fragment">Premium startups pay more</p>
+          </div>
+        </div>
+
+        <div class="market-tag fragment"><span class="badge-medium">Medium Demand</span> <span
+            class="badge-neutral">India is Android-dominant</span></div>
       </section>
 
-      <!-- 
-        SECTION 5: NATIVE vs CROSS PLATFORM (REALITY)
-        Slide 13 — Honest Comparison
-      -->
-      <section class="slide-comparison-table">
-        <h2>Honest Comparison</h2>
+      <!-- Slide 12 — Flutter Career -->
+      <section class="slide-career-flutter">
+        <div class="career-header-compact">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" alt="Flutter"
+            class="career-logo-small">
+          <div>
+            <h2>Flutter</h2>
+            <div class="demand-rating"><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span
+                class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span class="fire-icon dim">🔥</span></div>
+          </div>
+        </div>
 
-        <table class="comparison-vis">
+        <div class="career-grid-compact">
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">🏢 Top Companies</h3>
+            <div class="company-list-compact">
+              <div class="company-item-compact"><img src="https://www.1mg.com/images/tata_1mg_logo.svg"
+                  class="company-logo-tiny"> Tata 1mg</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/d/df/Nykaa_logo.png" class="company-logo-tiny">
+                Nykaa</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Upgrad_logo.svg" class="company-logo-tiny">
+                upGrad</div>
+              <div class="company-item-compact">🚀 Early startups</div>
+              <div class="company-item-compact">🏢 Service companies</div>
+            </div>
+          </div>
+
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">💰 Salary (India)</h3>
+            <div class="salary-table-compact">
+              <div class="salary-row-compact entry">
+                <span class="level-text">Entry</span>
+                <span class="salary-text">₹3.5-7L</span>
+              </div>
+              <div class="salary-row-compact mid">
+                <span class="level-text">Mid</span>
+                <span class="salary-text">₹8-15L</span>
+              </div>
+              <div class="salary-row-compact senior">
+                <span class="level-text">Senior</span>
+                <span class="salary-text">₹16-28L</span>
+              </div>
+            </div>
+            <p class="note-text fragment">Cost-efficient for MVPs</p>
+          </div>
+        </div>
+
+        <div class="market-tag fragment"><span class="badge-high">Very High Demand</span> <span
+            class="badge-neutral">Startup favorite</span></div>
+      </section>
+
+      <!-- Slide 13 — React Native Career -->
+      <section class="slide-career-rn">
+        <div class="career-header-compact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Native"
+            class="career-logo-small react-spin">
+          <div>
+            <h2>React Native</h2>
+            <div class="demand-rating"><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span
+                class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span class="fire-icon dim">🔥</span></div>
+          </div>
+        </div>
+
+        <div class="career-grid-compact">
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">🏢 Top Companies</h3>
+            <div class="company-list-compact">
+              <div class="company-item-compact"><img
+                  src="https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png"
+                  class="company-logo-tiny" style="object-position: -90px 0; width: 60px; height: 20px;"> Myntra</div>
+              <div class="company-item-compact"><img src="https://zerodha.com/static/images/logo.svg"
+                  class="company-logo-tiny"> Zerodha</div>
+              <div class="company-item-compact"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Sharechat_Logo.svg"
+                  class="company-logo-tiny"> ShareChat</div>
+              <div class="company-item-compact">🚀 SaaS startups</div>
+            </div>
+          </div>
+
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">💰 Salary (India)</h3>
+            <div class="salary-table-compact">
+              <div class="salary-row-compact entry">
+                <span class="level-text">Entry</span>
+                <span class="salary-text">₹4-8L</span>
+              </div>
+              <div class="salary-row-compact mid">
+                <span class="level-text">Mid</span>
+                <span class="salary-text">₹9-16L</span>
+              </div>
+              <div class="salary-row-compact senior">
+                <span class="level-text">Senior</span>
+                <span class="salary-text">₹18-30L</span>
+              </div>
+            </div>
+            <p class="note-text fragment">Stable demand</p>
+          </div>
+        </div>
+
+        <div class="market-tag fragment"><span class="badge-high">High Demand</span> <span class="badge-neutral">Great
+            for web devs</span></div>
+      </section>
+
+      <!-- Slide 14 — KMP Career -->
+      <section class="slide-career-kmp">
+        <div class="career-header-compact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="KMP"
+            class="career-logo-small">
+          <div>
+            <h2>Kotlin Multiplatform (KMP)</h2>
+            <div class="demand-rating"><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span
+                class="fire-icon">🔥</span><span class="fire-icon">🔥</span><span class="fire-icon">🔥</span></div>
+          </div>
+        </div>
+
+        <div class="career-grid-compact">
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">🏢 Top Companies</h3>
+            <div class="company-list-compact">
+              <div class="company-item-compact">💳 Juspay</div>
+              <div class="company-item-compact">💰 Cashfree</div>
+              <div class="company-item-compact">🏦 Enterprise fintech</div>
+              <div class="company-item-compact">🌍 Global teams</div>
+            </div>
+          </div>
+
+          <div class="career-section-compact fragment fade-up">
+            <h3 class="section-title-small">💰 Salary (India)</h3>
+            <div class="salary-table-compact">
+              <div class="salary-row-compact entry">
+                <span class="level-text">Entry</span>
+                <span class="salary-text">Rare</span>
+              </div>
+              <div class="salary-row-compact mid">
+                <span class="level-text">Mid</span>
+                <span class="salary-text">₹15-25L</span>
+              </div>
+              <div class="salary-row-compact senior">
+                <span class="level-text">Senior</span>
+                <span class="salary-text">₹28-45L</span>
+              </div>
+            </div>
+            <p class="note-text fragment">Needs Android background</p>
+          </div>
+        </div>
+
+        <div class="market-tag fragment"><span class="badge-medium">Emerging</span> <span class="badge-neutral">Limited
+            roles</span></div>
+      </section>
+
+
+
+      <!-- Slide 16 — Comparison Table -->
+      <section class="slide-career-comparison">
+        <h2>Career Comparison (India 2025)</h2>
+
+        <table class="career-table-compact">
           <thead>
             <tr>
-              <th>Feature</th>
-              <th class="col-native">Native</th>
-              <th class="col-cross">Cross-Platform</th>
+              <th>Tech</th>
+              <th>Demand</th>
+              <th>Entry Jobs</th>
+              <th>Growth</th>
+              <th>Salary</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="fragment">
-              <td>Performance</td>
-              <td class="col-native highlight">Best 🔥</td>
-              <td class="col-cross">Good (Tradeoffs)</td>
+            <tr class="fragment fade-up">
+              <td class="tech-col"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg"
+                  class="table-logo"> Android</td>
+              <td>🔥🔥🔥🔥🔥</td>
+              <td><span class="badge-pos">High</span></td>
+              <td><span class="badge-pos">V.Strong</span></td>
+              <td><span class="badge-pos">High</span></td>
             </tr>
-            <tr class="fragment">
-              <td>Access</td>
-              <td class="col-native highlight">Full Hardware</td>
-              <td class="col-cross">Plugins Required</td>
+            <tr class="fragment fade-up">
+              <td class="tech-col"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                  class="table-logo filter-white"> iOS</td>
+              <td>🔥🔥🔥🔥</td>
+              <td><span class="badge-neu">Medium</span></td>
+              <td><span class="badge-pos">Strong</span></td>
+              <td><span class="badge-pos">V.High</span></td>
             </tr>
-            <tr class="fragment">
-              <td>Cost/Time</td>
-              <td class="col-native">Higher/Slower</td>
-              <td class="col-cross highlight">Lower/Faster ⚡</td>
+            <tr class="fragment fade-up">
+              <td class="tech-col"><img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png"
+                  class="table-logo"> Flutter</td>
+              <td>🔥🔥🔥🔥</td>
+              <td><span class="badge-pos">V.High</span></td>
+              <td><span class="badge-pos">Strong</span></td>
+              <td><span class="badge-neu">Medium</span></td>
+            </tr>
+            <tr class="fragment fade-up">
+              <td class="tech-col"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                  class="table-logo"> RN</td>
+              <td>🔥🔥🔥</td>
+              <td><span class="badge-pos">High</span></td>
+              <td><span class="badge-neu">Stable</span></td>
+              <td><span class="badge-neu">Medium</span></td>
+            </tr>
+            <tr class="fragment fade-up">
+              <td class="tech-col"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png"
+                  class="table-logo"> KMP</td>
+              <td>🔥🔥</td>
+              <td><span class="badge-neg">Low</span></td>
+              <td><span class="badge-pos">High</span></td>
+              <td><span class="badge-pos">V.High</span></td>
+            </tr>
+            <tr class="fragment fade-up">
+              <td class="tech-col">CMP</td>
+              <td>🔥</td>
+              <td><span class="badge-neg">V.Low</span></td>
+              <td><span class="badge-neg">Exp</span></td>
+              <td><span class="badge-neu">Unclear</span></td>
             </tr>
           </tbody>
         </table>
-
-        <div class="practical-truth fragment fade-up">
-          <p><strong>Gaming / AR?</strong> Go Native.</p>
-          <p><strong>Startup / MVP?</strong> Go Cross-Platform.</p>
-        </div>
-
-        <aside class="notes">
-          Native: Best performance, full hardware access.
-          Cross Platform: Faster, single codebase.
-          Gaming -> Native. Startup -> Cross-platform.
-        </aside>
       </section>
 
-      <!-- 
-        SECTION 6: EARNING OPPORTUNITIES
-        Slide 14 — Android Salary
-      -->
-      <section class="slide-salary-android">
-        <h2>Android Developer Salary <span class="flag">🇮🇳</span></h2>
 
-        <div class="chart-container">
-          <!-- Animated Bar Chart via CSS -->
-          <div class="bar-group fragment grow">
-            <div class="bar-label">Entry</div>
-            <div class="bar" style="height: 30%;">₹3-6 LPA</div>
-          </div>
-          <div class="bar-group fragment grow">
-            <div class="bar-label">Mid</div>
-            <div class="bar" style="height: 60%;">₹8-15 LPA</div>
-          </div>
-          <div class="bar-group fragment grow">
-            <div class="bar-label">Senior</div>
-            <div class="bar" style="height: 100%;">₹20-40+ LPA</div>
-          </div>
-        </div>
 
-        <div class="freelance-tag fragment">Freelance: ₹15k - ₹1.5L+ per project</div>
-      </section>
 
-      <!-- Slide 15 — Flutter/RN Salary -->
-      <section class="slide-salary-cross">
-        <h2>Flutter / React Native Market</h2>
-        <div class="market-tags">
-          <span class="tag-pill fragment">High Demand</span>
-          <span class="tag-pill fragment">Startups</span>
-          <span class="tag-pill fragment">Remote Jobs</span>
-        </div>
 
-        <div class="stats-box fragment">
-          <p>Entry Level: <strong>₹4-8 LPA</strong></p>
-          <p>Intl. Freelance: <strong>$20 - $50 / hour</strong></p>
-        </div>
-      </section>
+
+
+
 
       <!-- 
         SECTION 7: WHAT SHOULD YOU CHOOSE?
@@ -972,31 +1122,6 @@
       -->
       <section class="slide-decision">
         <h2>What Should You Choose?</h2>
-
-        <div class="decision-grid">
-          <div class="decision-card fragment fade-up" onclick="highlightDecision(this)">
-            <h4>Long-term Stability</h4>
-            <div class="arrow">⬇️</div>
-            <div class="res native">Native Android</div>
-          </div>
-          <div class="decision-card fragment fade-up" onclick="highlightDecision(this)">
-            <h4>Fast Freelancing</h4>
-            <div class="arrow">⬇️</div>
-            <div class="res cross">Flutter</div>
-          </div>
-          <div class="decision-card fragment fade-up" onclick="highlightDecision(this)">
-            <h4>Web Background</h4>
-            <div class="arrow">⬇️</div>
-            <div class="res cross">React Native</div>
-          </div>
-          <div class="decision-card fragment fade-up" onclick="highlightDecision(this)">
-            <h4>Enterprise Future</h4>
-            <div class="arrow">⬇️</div>
-            <div class="res hybrid">Kotlin Multiplatform</div>
-          </div>
-        </div>
-
-        <p class="final-advice fragment zoom-in">Pick one. Go deep. Build real apps.</p>
       </section>
 
       <!-- 
