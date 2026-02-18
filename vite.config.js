@@ -8,6 +8,7 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
                 module1: resolve(__dirname, 'module1.html'),
                 module2: resolve(__dirname, 'module2.html'),
+                module3: resolve(__dirname, 'module3.html'),
             }
         }
     }
