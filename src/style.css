@@ -798,18 +798,64 @@ body {
 
 /* CLOSING */
 .slide-closing {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 .closing-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #fff;
+  margin-bottom: 10px;
+}
+
+.slide-closing h2 {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.closing-actions {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .closing-actions p {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--accent-color);
+  margin: 0;
+}
+
+.closing-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.resource-link {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.resource-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
 }
 
 /* REDESIGNED ANDROID SLIDE GRID */
